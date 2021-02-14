@@ -1,0 +1,8 @@
+          *** Added all the bugs and debugging techniques used in the App ***   
+
+1. Adding Fuse.js for optimized search filtering and NLP like behaviour
+   -Debug : There was a broken package and dependency in package.json
+            Fixed it using : npm i fuse.js@3.4.3 / npm install --save fuse.js
+
+  
+This is a test

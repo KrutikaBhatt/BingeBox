@@ -1,0 +1,25 @@
+1. The link used to download the movie clips and Images required
+   -https://www.mp3paw.net/
+
+2. Added styled-components 
+  - npm add styled-components [I don't think this is correct]
+  -  npm install --save styled-components
+
+3. Installing Firebase to the project
+  -  npm install --save firebase
+   firebase version : firebase@8.2.7
+
+4. Yarn and npm Command cheat sheet :
+  - https://www.digitalocean.com/community/tutorials/nodejs-npm-yarn-cheatsheet
+
+5. Added Fuse.js for Better searching and supporting NLP behaviour for filtering
+   -  npm install fuse --save
+    Showed 3 vulnerabilities : npm audit fix
+   -- using - npm i fuse.js@3.4.3 / npm install --save fuse.js 
+
+6. Added normalize.css
+   - npm install normalize.css 
+
+
+
+
