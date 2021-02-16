@@ -26,4 +26,4 @@
 8. The Information to be shown to the users are added to fixtures folder in jumbo.json
    - Jumbo.json contains array of objects to show the user 
 
-
+9. Added Jumbotron.Pane to revert/Flip the diretions of images on home page
