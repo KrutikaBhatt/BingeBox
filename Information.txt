@@ -20,6 +20,10 @@
 6. Added normalize.css
    - npm install normalize.css 
 
+7. Adding  react Router
+   -  npm install --save react-router-dom
 
+8. The Information to be shown to the users are added to fixtures folder in jumbo.json
+   - Jumbo.json contains array of objects to show the user 
 
 

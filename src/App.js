@@ -1,10 +1,9 @@
 import React from 'react';
+import Jumbotron from './components/jumbotron';
 
 function App() {
   return (
-    <h1>
-      Heloo OTT platform
-    </h1>
+    <Jumbotron />
   );
 }
 
