@@ -4,11 +4,15 @@
    -Debug : There was a broken package and dependency in package.json
             Fixed it using : npm i fuse.js@3.4.3 / npm install --save fuse.js
 
-On - 17-02-2021
-   2. Module not found: Can't resolve '../styles/jumbotron'
+On - 16-02-2021
+   1. Module not found: Can't resolve '../styles/jumbotron'
       - Import the folder properly
 
-   3. Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. 
+   2. Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. 
    You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
    - This was because I only created Jumbotrom class and not the contaniner. I will have to make it
    - Debug :Created Jumbotron.Container in jumbotron/index.js . Import Container from styles
+
+On 17-02-2021
+   1.  Images weren't seen on the screen , So the error on console was -The tag <image> is no recognized on this browser
+   Debug : Render it under react and use <image> as <img>
