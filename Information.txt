@@ -27,3 +27,6 @@
    - Jumbo.json contains array of objects to show the user 
 
 9. Added Jumbotron.Pane to revert/Flip the diretions of images on home page
+
+10. Installing Prettier and Eslint
+   - npm install eslint --save-dev
