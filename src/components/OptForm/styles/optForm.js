@@ -22,13 +22,9 @@ export const Input = styled.input`
   box-sizing: border-box;
 `;
 
-export const Break = styled.div`
-  flex-basis: 100%;
-  height: 0;
-`;
 
 export const Button = styled.button`
-  display: flex;
+  display: block;
   align-items: center;
   height: 70px;
   background: #e50914;
@@ -38,7 +34,7 @@ export const Button = styled.button`
   font-size: 26px;
   border: 0;
   cursor: pointer;
-
+  margin-top: 20px;
   img {
     margin-left: 10px;
     filter: brightness(0) invert(1);
@@ -70,4 +66,8 @@ export const Text = styled.p`
     font-size: 16px;
     line-height: 22px;
   }
+`;
+export const Break = styled.div`
+  flex-basis: 100%;
+  height: 10px;
 `;

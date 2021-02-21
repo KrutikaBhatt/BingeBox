@@ -30,8 +30,5 @@ OptingForm.Text = function OptingFormText({children,...restProps}){
 };
 
 OptingForm.Break = function OptingFormBreak({...restProps}){
-    return (
-        <Break {...restProps}>
-        </Break>
-    );
+    return <Break {...restProps} />;
 };
