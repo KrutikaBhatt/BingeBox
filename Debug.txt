@@ -16,3 +16,9 @@ On - 16-02-2021
 On 17-02-2021
    1.  Images weren't seen on the screen , So the error on console was -The tag <image> is no recognized on this browser
    Debug : Render it under react and use <image> as <img>
+
+On 24-02-2021 
+   
+   Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. 
+   You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+   Check the render method of `HeaderContainer`.
