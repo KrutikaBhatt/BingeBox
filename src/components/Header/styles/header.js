@@ -2,9 +2,15 @@ import styled from 'styled-components/macro';
 import {Link as ReactLink} from 'react-router-dom';
 
 export const Background = styled.div`
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg')}) top left / cover
+    no-repeat;
 
+  @media (max-width: 1100px) {
+    ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
+  }
 `;
-
 
 export const Frame =styled.div``;
 
@@ -27,7 +33,7 @@ export const Container =styled.div`
 export const Logo = styled.img`
     
     margin-right:40px;
-
+    height : 
     @media(min-width:1450px){
        
     }
@@ -37,13 +43,13 @@ export const Logo = styled.img`
 export const ButtonLink = styled(ReactLink)`
     display : block;
     background-color: #1A74E2;
-    width :84px;
-    height :fit-content;
+    width :100px;
+    height :55px;
     color:white;
     border :0;
-    font-size :15px;
+    font-size :20px;
     border-radius :3px;
-    padding : 8px 17px;
+    padding : 18px 17px;
     cursor: pointer;
     text-decoration: none;
     box-sizing: border-box;

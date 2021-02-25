@@ -13,16 +13,16 @@ export const Inner = styled.div`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-width: 700px;
+  max-width: 815px;
   margin: auto;
 `;
 
 export const Title = styled.h1`
-  font-size: 43px;
+  font-size: 46px;
   line-height: 1.1;
   margin-top: 0;
   margin-bottom: 8px;
-  color: #0063B2FF;
+  color: #1A74E2;
   text-align: center;
 
   @media (max-width: 600px) {

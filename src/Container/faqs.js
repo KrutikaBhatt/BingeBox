@@ -5,6 +5,7 @@ import {FAQs , OptingForm} from '../components';
 
 export function FAQsContainer(){
     return(
+        <div>
         <FAQs>
             <FAQs.Title>
                 Frequently Asked Questions 
@@ -17,6 +18,7 @@ export function FAQsContainer(){
                 </FAQs.Item>
             ))}
             </FAQs.Frame>
+        
             <OptingForm>
                 <OptingForm.Input placeholder ="Enter Your Email Adress"></OptingForm.Input>
                
@@ -25,7 +27,8 @@ export function FAQsContainer(){
                 <OptingForm.Text>Ready to watch? Enter your email to create or restart your
                     membership </OptingForm.Text>
             </OptingForm>
-        </FAQs>
+     </FAQs>
+       </div>
 
     );
 }

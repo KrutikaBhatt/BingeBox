@@ -27,14 +27,13 @@ export const Button = styled.button`
   display: block;
   align-items: center;
   height: 70px;
-  background: #e50914;
+  background: #1A74E2;
   color: white;
   text-transform: uppercase;
   padding: 0 32px;
   font-size: 26px;
   border: 0;
   cursor: pointer;
-  margin-top: 20px;
   img {
     margin-left: 10px;
     filter: brightness(0) invert(1);
@@ -46,7 +45,8 @@ export const Button = styled.button`
   }
 
   &:hover {
-    background: #f40612;
+    background: #6BD0FF;
+    color : black;
   }
 
   @media (max-width: 1000px) {
