@@ -5,6 +5,7 @@ import {FooterContainer} from '../Container/footer';
 import {HeaderContainer} from '../Container/header';
 import {OptingForm} from '../components';
 import {Feature} from '../components';
+
 export default function HOME(){
     return(
         <>
