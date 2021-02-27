@@ -8,7 +8,7 @@ export function HeaderContainer({children}){
         <Header>
             <Header.Frame>
                 <Header.Logo imageLink={ROUTES.HOME} alt="BingeBox Logo" src={logo}/>
-                <Header.ButtonLink  to={ROUTES.signup}>Sign In </Header.ButtonLink>
+                <Header.ButtonLink  to={ROUTES.login}>Sign In </Header.ButtonLink>
             </Header.Frame>
             {children}
         </Header>
