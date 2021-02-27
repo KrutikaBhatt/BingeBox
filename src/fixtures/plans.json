@@ -1,0 +1,55 @@
+[
+    {
+        "id" :1,
+        "header" :"Mobile",
+        "Price" : "₹ 99",
+        "video_quality" :"Good",
+        "resolution" :"480p",
+        "onTV" :"/Images/Notations/cross.png",
+        "onMobile": "/Images/Notations/tick.png",
+        "concurrent_watches":1,
+        "unlimited_movies":"/Images/Notations/tick.png",
+        "cancel": "/Images/Notations/tick.png"
+
+    },
+    {
+        "id" :2,
+        "header" :"Basic",
+        "Price" : "₹ 199",
+        "video_quality" :"Good",
+        "resolution" :"480p",
+        "onTV" :"/Images/Notations/tick.png",
+        "onMobile": "/Images/Notations/tick.png",
+        "concurrent_watches":1,
+        "unlimited_movies":"/Images/Notations/tick.png",
+        "cancel": "/Images/Notations/tick.png"
+
+    },
+    {
+        "id" :3,
+        "header" :"Standard",
+        "Price" : "₹ 499",
+        "video_quality" :"Better",
+        "resolution" :"1080p",
+        "onTV" :"/Images/Notations/tick.png",
+        "onMobile": "/Images/Notations/tick.png",
+        "concurrent_watches":2,
+        "unlimited_movies":"/Images/Notations/tick.png",
+        "cancel": "/Images/Notations/tick.png"
+
+    },
+    {
+        "id" :4,
+        "header" :"Premium",
+        "Price" : "₹ 899",
+        "video_quality" :"Best",
+        "resolution" :"4K+HDR",
+        "onTV" :"/Images/Notations/tick.png",
+        "onMobile": "/Images/Notations/tick.png",
+        "concurrent_watches":4,
+        "unlimited_movies":"/Images/Notations/tick.png",
+        "cancel": "/Images/Notations/tick.png"
+
+    }
+    
+]
