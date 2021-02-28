@@ -5,5 +5,5 @@ export {default as OptingForm} from './OptForm';
 export {default as Header} from './Header';
 export {default as Feature} from './Feature';
 export {default as Login_Form } from './Login_form';
-export {default as Payment } from './Payment';
+export {default as PaymentComp } from './Payment';
 export {default as PHeader} from './payment_header';
