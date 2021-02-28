@@ -1,5 +1,12 @@
 import React from 'react';
+import {FooterContainer} from '../Container/footer';
+import {HeaderContainer} from '../Container/payment_header';
 
 export default function Payment(){
-    return(<h1>Hello from payment</h1>);
+    return(
+        <>
+        <HeaderContainer />
+        <FooterContainer />
+        </>
+    );
 }
