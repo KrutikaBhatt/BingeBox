@@ -63,6 +63,7 @@ export const Price_box =styled.div`
     text-align:center;
   }
 `;
+/*
 
 export const Button = styled.div`
   font-size:20px;
@@ -78,7 +79,52 @@ export const Button = styled.div`
   margin-left: 6.3em;
   border-radius: 6px;
   cursor: pointer;
+
 `;
+*/
+
+export const Button =styled.div`
+  font-size:20px;
+  background-color:#7878D8;
+  border:none;
+  color:#fff;
+  padding: 10px 15px;
+  text-align:center;
+  text-decoration:none;
+  font-size:25px;
+  width: 265px;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 70px;
+  
+  padding: 20px;
+  position: relative;
+  float: left;
+  margin-top: 40px;
+  margin-left :30%;
+
+  :after{
+  content: " ";
+  position: absolute;
+  right: 110px;
+  top: -15px;
+  border-top: none;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #7878D8;
+  }
+
+  @media(max-width:900px){
+    margin-left:30%;
+    margin-bottom:40px;
+    width:200px;
+
+    :after{
+      right: 88px;
+    }
+  }
+`;
+
 
 export const Emp =styled.li`
   background-color:#f4f4f4;
