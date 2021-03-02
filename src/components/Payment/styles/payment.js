@@ -85,7 +85,7 @@ export const Button = styled.div`
 
 export const Button =styled.div`
   font-size:20px;
-  background-color:#7878D8;
+  background-color:blue;
   border:none;
   color:#fff;
   padding: 10px 15px;
@@ -111,7 +111,7 @@ export const Button =styled.div`
   border-top: none;
   border-right: 15px solid transparent;
   border-left: 15px solid transparent;
-  border-bottom: 15px solid #7878D8;
+  border-bottom: 15px solid blue;
   }
 
   @media(max-width:900px){
