@@ -19,7 +19,7 @@ export default function SignUp(){
     
     const handleSignup = (event) => {
         event.preventDefault();
-    
+
         return firebase
           .auth()
           .createUserWithEmailAndPassword(emailAddress, password)
@@ -30,15 +30,22 @@ export default function SignUp(){
                 photoURL: Math.floor(Math.random() * 5) + 1,
               })
               .then(() => {
+                var user = firebase.auth().currentUser;
+
+                user.sendEmailVerification().then(function() {
+                }).catch(function(error) {
+                });
                 history.push(ROUTES.payment);
               })
           )
+
           .catch((error) => {
             setFirstName('');
             setEmailAddress('');
             setPassword('');
             setError(error.message);
           });
+         
       };
     return(
         <>

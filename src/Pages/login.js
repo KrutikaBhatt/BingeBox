@@ -15,6 +15,7 @@ export default function Login(){
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');
 
+    const forgotFlag = false;
     const isInvalid = password ==''||emailId == '';
 
     //Firebase Work here --
@@ -33,6 +34,18 @@ export default function Login(){
             setError(error.message);
           });
     };
+
+    const forgetPassword = ()=>{
+        forgotFlag = true;
+        var auth = firebase.auth();
+        var emailAddress = emailId;
+
+        auth.sendPasswordResetEmail(emailAddress).then(function() {
+        
+        }).catch(function(error) {
+       
+        });
+    }
     return(
         <>
     <HeaderContainer>
@@ -41,6 +54,7 @@ export default function Login(){
                 Log In
             </Login_Form.Title>
             {error && <Login_Form.Error>{error}</Login_Form.Error>}
+            {forgotFlag && <Login_Form.Error>You have received the Password reset mail to your given email Address </Login_Form.Error>}
 
             <Login_Form.Base onSubmit={handleLogin} method ="POST">
 
@@ -49,7 +63,11 @@ export default function Login(){
                 <Login_Form.Submit disabled ={isInvalid} type = "submit">
                     Log In
                 </Login_Form.Submit>
+
+               <center><Login_Form.Text ><a href ="" onClick ={forgetPassword}>Forgot Password</a></Login_Form.Text></center>
+               
             </Login_Form.Base>
+          
             <Login_Form.Text> New to Binge Box? <Login_Form.Link to="/signup">Sign up now!</Login_Form.Link>
             </Login_Form.Text>
 
