@@ -17,7 +17,6 @@ export default function Login(){
 
     const forgotFlag = false;
     const isInvalid = password ==''||emailId == '';
-
     //Firebase Work here --
     const handleLogin =(event) =>{
         event.preventDefault();
@@ -36,14 +35,14 @@ export default function Login(){
     };
 
     const forgetPassword = ()=>{
-        forgotFlag = true;
         var auth = firebase.auth();
         var emailAddress = emailId;
 
+        console.log(emailAddress);
         auth.sendPasswordResetEmail(emailAddress).then(function() {
-        
+            
         }).catch(function(error) {
-       
+            console.log(error.message);
         });
     }
     return(
@@ -63,11 +62,8 @@ export default function Login(){
                 <Login_Form.Submit disabled ={isInvalid} type = "submit">
                     Log In
                 </Login_Form.Submit>
-
-               <center><Login_Form.Text ><a href ="" onClick ={forgetPassword}>Forgot Password</a></Login_Form.Text></center>
-               
+                <center><Login_Form.Text ><a href ="" onClick ={forgetPassword}>Forgot Password</a></Login_Form.Text></center>
             </Login_Form.Base>
-          
             <Login_Form.Text> New to Binge Box? <Login_Form.Link to="/signup">Sign up now!</Login_Form.Link>
             </Login_Form.Text>
 
