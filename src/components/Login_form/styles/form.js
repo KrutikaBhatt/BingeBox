@@ -90,3 +90,11 @@ export const Submit = styled.button`
     opacity: 0.5;
   }
 `;
+export const Reset = styled.p`
+  margin-top: 15px;
+  font-size: 18px;
+  line-height: normal;
+  color: #ED2939;
+  cursor :pointer;
+
+`;

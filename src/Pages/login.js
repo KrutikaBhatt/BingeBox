@@ -5,6 +5,7 @@ import {FooterContainer} from '../Container/footer';
 import {HeaderContainer} from '../Container/login_header';
 import {Login_Form} from '../components';
 import * as ROUTES from '../Routes_System/routes';
+import { isElementOfType } from 'react-dom/test-utils';
 
 export default function Login(){
 
@@ -15,7 +16,6 @@ export default function Login(){
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');
 
-    const forgotFlag = false;
     const isInvalid = password ==''||emailId == '';
     //Firebase Work here --
     const handleLogin =(event) =>{
@@ -35,15 +35,21 @@ export default function Login(){
     };
 
     const forgetPassword = ()=>{
+
         var auth = firebase.auth();
         var emailAddress = emailId;
-
+        if(emailAddress == ''){
+            setError("Please enter the email Field");
+        }
+        else{
         console.log(emailAddress);
+        setError("Password reset link sent to your email Address");
         auth.sendPasswordResetEmail(emailAddress).then(function() {
             
         }).catch(function(error) {
             console.log(error.message);
         });
+    }
     }
     return(
         <>
@@ -53,7 +59,6 @@ export default function Login(){
                 Log In
             </Login_Form.Title>
             {error && <Login_Form.Error>{error}</Login_Form.Error>}
-            {forgotFlag && <Login_Form.Error>You have received the Password reset mail to your given email Address </Login_Form.Error>}
 
             <Login_Form.Base onSubmit={handleLogin} method ="POST">
 
@@ -62,8 +67,9 @@ export default function Login(){
                 <Login_Form.Submit disabled ={isInvalid} type = "submit">
                     Log In
                 </Login_Form.Submit>
-                <center><Login_Form.Text ><a href ="" onClick ={forgetPassword}>Forgot Password</a></Login_Form.Text></center>
+                
             </Login_Form.Base>
+            <center><Login_Form.resetPassword ><p onClick ={forgetPassword} style={{color: "white"}}>Forgot Password</p></Login_Form.resetPassword></center>
             <Login_Form.Text> New to Binge Box? <Login_Form.Link to="/signup">Sign up now!</Login_Form.Link>
             </Login_Form.Text>
 

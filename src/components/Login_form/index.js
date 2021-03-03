@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Error, Base, Title, Text, TextSmall, Link, Input, Submit } from './styles/form';
+import { Container, Error, Base, Title, Text, TextSmall, Link, Input, Submit,Reset } from './styles/form';
 
 export default function Login_form({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
@@ -36,4 +36,8 @@ Login_form.Input = function Login_formInput({ children, ...restProps }) {
 
 Login_form.Submit = function Login_formSubmit({ children, ...restProps }) {
   return <Submit {...restProps}>{children}</Submit>;
+};
+
+Login_form.resetPassword = function LoginReset({children,...restProps}){
+  return <Reset {...restProps}>{children}</Reset>
 };
