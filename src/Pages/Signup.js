@@ -9,7 +9,7 @@ import * as ROUTES from '../Routes_System/routes';
 export default function SignUp(){
     const history = useHistory();
     const { firebase } = useContext(FirebaseContext);
-
+    const firestore = firebase.firestore();
     const [firstName, setFirstName] = useState('');
     const [emailAddress, setEmailAddress] = useState('');
     const [password, setPassword] = useState('');
@@ -23,7 +23,7 @@ export default function SignUp(){
         return firebase
           .auth()
           .createUserWithEmailAndPassword(emailAddress, password)
-          .then((result) =>
+          .then((result) =>{
             result.user
               .updateProfile({
                 displayName: firstName,
@@ -31,13 +31,20 @@ export default function SignUp(){
               })
               .then(() => {
                 var user = firebase.auth().currentUser;
-
+                const data ={
+                  emailId :emailAddress,
+                  Name :firstName,
+                  plan: '',
+                  recommendation :[],
+                  valid_till :'',
+                };
+                firestore.collection('users').doc(user.uid).set(data);
                 user.sendEmailVerification().then(function() {
                 }).catch(function(error) {
                 });
                 history.push(ROUTES.payment);
               })
-          )
+            })
 
           .catch((error) => {
             setFirstName('');
