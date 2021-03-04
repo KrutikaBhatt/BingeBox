@@ -79,7 +79,7 @@ export default function SignUp(){
               placeholder="Password"
               onChange={({ target }) => setPassword(target.value)}
             />
-            <Form.Submit disabled={isInvalid} type="submit" data-testid="sign-up">
+            <Form.Submit disabled={isInvalid} type="submit" data-testid="sign-up" onclick="alert('Verification mail is sent to your Email-Id. Please verify!!');">
               Sign Up
             </Form.Submit>
           </Form.Base>
