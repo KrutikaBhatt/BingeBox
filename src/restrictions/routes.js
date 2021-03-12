@@ -35,7 +35,7 @@ export function ProtectedBrowse({ user, children, ...rest }) {
             return children;
           }
   
-          if (!user) {
+          if (!user || user == null) {
             return (
               <Redirect
                 to={{
