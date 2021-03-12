@@ -39,7 +39,7 @@ export function ProtectedBrowse({ user, children, ...rest }) {
             return (
               <Redirect
                 to={{
-                  pathname: 'signup',
+                  pathname: '/signup',
                   state: { from: location },
                 }}
               />
