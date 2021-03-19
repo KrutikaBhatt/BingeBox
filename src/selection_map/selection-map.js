@@ -1,6 +1,6 @@
 
 //Filtering movies and series based on the selection
-export default function  selectionMap({series,films}){
+export default function  selectionFilter({series,films}){
     return{
         series: [
             {
@@ -24,6 +24,29 @@ export default function  selectionMap({series,films}){
                 data: series.filter((item)=>item.genre == 'feel-good'),
             }
 
-        ]
+        ],
+
+        films: [
+            { 
+                title: 'Drama', 
+                data: films?.filter((item) => item.genre === 'drama') 
+            },
+            { 
+                title: 'Thriller', 
+                data: films?.filter((item) => item.genre === 'thriller') 
+            },
+            { 
+                title: 'Children',
+                data: films?.filter((item) => item.genre === 'children') 
+            },
+            { 
+                title: 'Suspense', 
+                data: films?.filter((item) => item.genre === 'suspense') 
+            },
+            { 
+                title: 'Romance', 
+                data: films?.filter((item) => item.genre === 'romance') 
+            },
+          ],
     }
 }

@@ -2,14 +2,16 @@ import React from 'react';
 import * as ROUTES from './Routes_System/routes';
 import {BrowserRouter as Router,Switch} from 'react-router-dom';
 import {HOME,Browse,SignUp,Login,Payment} from './Pages';
-import {IsUserRedirect, ProtectedBrowse} from './restrictions/routes';
+import {IsUserRedirect, ProtectedBrowse,ProtectedPaymentGateway} from './restrictions/routes';
 import { AuthListner} from './custom-hooks';
 
 export default function App() {
 
-  //const user = null; - No longer need to setup this .
+  //const user = null;  
   const user = AuthListner();
-  console.log(user);
+  //console.log(user);
+
+ // const user = null;
   
   return(
     <Router>
@@ -30,9 +32,9 @@ export default function App() {
         <HOME />
     </IsUserRedirect>
 
-    <ProtectedBrowse user={user} path={ROUTES.payment}>
+    <ProtectedPaymentGateway user={user} path={ROUTES.payment}>
       <Payment />
-     </ProtectedBrowse>
+     </ProtectedPaymentGateway>
      </Switch>
     </Router>
   );

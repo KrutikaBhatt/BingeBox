@@ -6,7 +6,6 @@ export default function AuthListner(){
 
     const {firebase} = useContext(FirebaseContext);
 
-    //Fucking Magic
     useEffect(() => {
         const listner = firebase.auth().onAuthStateChanged((authUser)=>{
             if(authUser){

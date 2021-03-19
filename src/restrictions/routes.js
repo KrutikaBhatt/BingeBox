@@ -52,3 +52,36 @@ export function ProtectedBrowse({ user, children, ...rest }) {
     );
   }
   
+  
+export function ProtectedPaymentGateway({ user, children, ...rest }) {
+  return (
+    <Route
+      {...rest}
+      render={({ location }) => {
+        if (user) {
+          //return children;
+          return(
+            <Redirect to={{
+              pathname: '/browse',
+              state:{from :location},
+            }}
+            />
+          );
+        }
+
+        if (!user || user == null) {
+          return (
+            <Redirect
+              to={{
+                pathname: '/signup',
+                state: { from: location },
+              }}
+            />
+          );
+        }
+
+        return null;
+      }}
+    />
+  );
+}
