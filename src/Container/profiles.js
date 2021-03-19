@@ -2,8 +2,9 @@ import React from 'react';
 import * as ROUTES from '../Routes_System/routes';
 import {Header} from '../components';
 import logo from '../BingeBoxLogo.png';
+import {Profiles} from '../components';
 
-export function SelectProfileContainer({user,setProfile}){
+export default function SelectProfilesContainer({user,setProfiles}){
     return (
         <>
         <Header bg ={false}>
@@ -11,15 +12,15 @@ export function SelectProfileContainer({user,setProfile}){
                 <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Bing Box" />
             </Header.Frame>
         </Header>
-        <Profile>
-            <Profile.Title>Who's watching Bing Box ?</Profile.Title>
-            <Profile.List>
-                <Profile.User>
-                    <Profile.picture src ={user.photoURL}></Profile.picture>
-                    <Profile.Name>{user.displayName}</Profile.Name>
-                </Profile.User>
-            </Profile.List>
-        </Profile>
+        <Profiles>
+            <Profiles.Title>Who's watching Bing Box ?</Profiles.Title>
+            <Profiles.List>
+                <Profiles.User>
+                    <Profiles.picture src ={user.photoURL}></Profiles.picture>
+                    <Profiles.Name>{user.displayName}</Profiles.Name>
+                </Profiles.User>
+            </Profiles.List>
+        </Profiles>
         </>
     );
 }

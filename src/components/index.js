@@ -7,3 +7,4 @@ export {default as Feature} from './Feature';
 export {default as Login_Form } from './Login_form';
 export {default as PaymentComp } from './Payment';
 export {default as PHeader} from './payment_header';
+export {default as Profiles} from './profiles';
