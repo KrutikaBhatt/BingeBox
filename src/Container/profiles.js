@@ -15,7 +15,7 @@ export default function SelectProfilesContainer({user,setProfiles}){
         <Profiles>
             <Profiles.Title>Who's watching Bing Box ?</Profiles.Title>
             <Profiles.List>
-                <Profiles.User>
+                <Profiles.User onClick={()=>setProfiles({displayName:user.displayName ,photoURL:user.photoURL})}>
                     <Profiles.picture src ={user.photoURL}></Profiles.picture>
                     <Profiles.Name>{user.displayName}</Profiles.Name>
                 </Profiles.User>
