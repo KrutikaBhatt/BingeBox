@@ -4,7 +4,7 @@ import {Header} from '../components';
 import logo from '../BingeBoxLogo.png';
 import {Profiles} from '../components';
 
-export default function SelectProfilesContainer({user,setProfiles}){
+export function SelectProfileContainer({user,setProfile}){
     return (
         <>
         <Header bg ={false}>
@@ -15,8 +15,8 @@ export default function SelectProfilesContainer({user,setProfiles}){
         <Profiles>
             <Profiles.Title>Who's watching Bing Box ?</Profiles.Title>
             <Profiles.List>
-                <Profiles.User onClick={()=>setProfiles({displayName:user.displayName ,photoURL:user.photoURL})}>
-                    <Profiles.picture src ={user.photoURL}></Profiles.picture>
+                <Profiles.User onClick={()=>setProfile({displayName:user.displayName ,photoURL:user.photoURL})} data-testid="user-profile">
+                    <Profiles.picture src ={user.photoURL} />
                     <Profiles.Name>{user.displayName}</Profiles.Name>
                 </Profiles.User>
             </Profiles.List>

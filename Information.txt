@@ -30,3 +30,6 @@
 
 10. Installing Prettier and Eslint
    - npm install eslint --save-dev
+
+11 . Get all the loading and process gifs 
+  https://loading.io/
