@@ -85,3 +85,26 @@ export const FeatureCallOut = styled.h2`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
 `;
+
+
+export const Link = styled.p`
+  color: #fff;
+  text-decoration: none;
+  margin-right: 30px;
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
+
+
+export const Group = styled.div`
+  display: flex;
+  align-items: center;
+`;

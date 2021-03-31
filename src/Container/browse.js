@@ -28,7 +28,11 @@ export function BrowseContainer({slides}){
       ) :<Loading.ReleaseBody />}
       <Header src="joker1">
       <Header.Frame>
+        <Header.Group>
                 <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Bing Box" />
+                <Header.TextLink>Series</Header.TextLink>
+                <Header.TextLink>Films</Header.TextLink>
+        </Header.Group>
       </Header.Frame>
       <Header.Feature>
         <Header.Callout>Watch Joker Now</Header.Callout>
