@@ -108,3 +108,67 @@ export const Group = styled.div`
   display: flex;
   align-items: center;
 `;
+export const Picture = styled.button`
+  background: url(${({ src }) => src});
+  background-size: contain;
+  border: 0;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`;
+
+export const Dropdown = styled.div`
+  display: none;
+  position: absolute;
+  background-color: black;
+  padding: 10px;
+  width: 165px;
+  top: 32px;
+  right: 10px;
+
+  ${Group}:last-of-type ${Link} {
+    cursor: pointer;
+  }
+
+  ${Group} {
+    margin-bottom: 14px;
+
+    &:last-of-type {
+      margin-bottom: 6px;
+    }
+
+    ${Link} {
+      cursor: pointer;
+    }
+
+    ${Picture} {
+      cursor: default;
+    }
+  }
+
+  button {
+    margin-right: 11px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+`;
+
+export const Profile = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  position: relative;
+
+  button {
+    cursor: pointer;
+  }
+
+  &:hover > ${Dropdown} {
+    display: flex;
+    flex-direction: column;
+  }
+`;
