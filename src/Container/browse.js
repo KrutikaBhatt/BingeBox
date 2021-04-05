@@ -4,6 +4,7 @@ import {FirebaseContext} from '../context/firebase';
 import {Loading , Header,Card} from '../components';
 import * as ROUTES from '../Routes_System/routes';
 import logo from '../BingeBoxLogo.png';
+import {FooterContainer} from '../Container/footer';
 
 export function BrowseContainer({slides}){
 
@@ -87,9 +88,13 @@ export function BrowseContainer({slides}){
                 </Card.Item>
               ))}
             </Card.Entities>
+            <Card.Feature category ={category}>
+              <p>Hello</p>
+            </Card.Feature>
           </Card>
         ))}
       </Card.Group>
+      <FooterContainer />
       </>
     ):(
       <SelectProfileContainer user ={user} setProfile ={setProfile}></SelectProfileContainer>
