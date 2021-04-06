@@ -10,3 +10,4 @@ export {default as PHeader} from './payment_header';
 export {default as Profiles} from './profiles';
 export {default as Loading} from './Loading';
 export {default as Card} from './movieCard'; 
+export {default as Player} from './player';

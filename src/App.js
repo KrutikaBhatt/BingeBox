@@ -7,8 +7,8 @@ import { AuthListner} from './custom-hooks';
 
 export default function App() {
 
-  const user = null;  
-  //const user = AuthListner();
+  //const user = null;  
+  const user = AuthListner();
   //console.log(user);
 
  // const user = null;
