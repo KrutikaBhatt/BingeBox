@@ -47,6 +47,7 @@ Header.SearchBar = function HeaderSearch({ searchTerm, setsearchTerm, ...restPro
       />
     </Search>
   );
+  
 };
 Header.Feature = function HeaderFeature({ children, ...restProps }) {
     return <Feature>{children}</Feature>;

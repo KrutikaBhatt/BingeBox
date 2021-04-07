@@ -1,10 +1,12 @@
 import React, { useContext ,useState,useEffect} from 'react';
 import { SelectProfileContainer } from './profiles';
 import {FirebaseContext} from '../context/firebase';
+import Fuse from 'fuse.js';
 import {Loading , Header,Card,Player} from '../components';
 import * as ROUTES from '../Routes_System/routes';
 import logo from '../BingeBoxLogo.png';
 import {FooterContainer} from '../Container/footer';
+
 
 export function BrowseContainer({slides}){
 
@@ -27,15 +29,26 @@ export function BrowseContainer({slides}){
       useEffect(() => {
         setSlideRows(slides[category]);
       }, [slides, category]);
+
+      useEffect(()=>{
+        const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
+        const results = fuse.search(searchTerm).map(({ item }) => item);
+        console.log(results);
+        if(slideRows.length >0 && searchTerm.length >3 && results.length >0){
+          setSlideRows(results);
+        }else{
+          setSlideRows(slides[category]);
+        }
     
-      console.log(user.photoURL);
+        },[searchTerm]);
+     
     return profile.displayName ?(
       <>
       {
       loading ?(
         <Loading src ={user.photoURL}/>
       ) :<Loading.ReleaseBody />}
-      <Header src="joker1">
+      <Header src="joker1" dontShowOnSmallViewPort>
       <Header.Frame>
         <Header.Group>
                 <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Bing Box" />
@@ -78,11 +91,11 @@ export function BrowseContainer({slides}){
       </Header>
 
       <Card.Group>
-        {slideRows.map((slideItem) =>(
+        {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
             <Card.Title>{slideItem.title}</Card.Title>
             <Card.Entities>
-              {slideItem.data.map((item)=>(
+              {slideItem.data.map((item) => (
                 <Card.Item key={item.docId} item={item}>
                   <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} />
                   <Card.Meta>
@@ -92,7 +105,7 @@ export function BrowseContainer({slides}){
                 </Card.Item>
               ))}
             </Card.Entities>
-            <Card.Feature category ={category}>
+            <Card.Feature category={category}>
               <Player>
                 <Player.Button />
                 <Player.Video src="/videos/bunny.mp4" />
