@@ -35,7 +35,8 @@ export const Logo = styled.img`
     margin-right:40px;
     height : 
     @media(min-width:1450px){
-       
+       height: 300px;
+       width : 300px;
     }
 `;
 

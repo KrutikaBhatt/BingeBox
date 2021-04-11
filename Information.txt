@@ -33,3 +33,13 @@
 
 11 . Get all the loading and process gifs 
   https://loading.io/
+
+12 . Recommendation criterion :
+  A . Popularity based - Number of clicks(DB)
+  B . Regional Movies 
+  C . String Similarity (Content Wise Recommendation)
+
+13 . Todo:
+1. Font size increase
+2. Play size (With Icon)
+
