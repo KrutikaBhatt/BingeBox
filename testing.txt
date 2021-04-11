@@ -2,3 +2,6 @@
 
 A. Testing setup
 In package.json :
+
+1 . Create the jest array and enter the root directory
+    Enter the coverage Threshold and coverage Reporters in the jest itself

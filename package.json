@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -42,6 +42,36 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.js",
+      "!<rootDir>/src/App.js",
+      "!<rootDir>/src/Routes_System/routes.js",
+      "!<rootDir>/src/context/firebase.js",
+      "!<rootDir>/src/Configurations/firebase.prod.js",
+      "!<rootDir>/src/index.js",
+      "!<rootDir>/src/database.js",
+      "!<rootDir>/src/selection_map/selection-map.js",
+      "!<rootDir>/src/Pages/index.js",
+      "!<rootDir>/src/globalStyles.js",
+      "!<rootDir>/src/components/index.js",
+      "!<rootDir>/src/firebase.prod.js",
+      "!<rootDir>/src/custom-hooks/*.js",
+      "!<rootDir>/src/context/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "html",
+      "text"
     ]
   },
   "devDependencies": {

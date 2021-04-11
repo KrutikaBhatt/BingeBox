@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Player /> renders the <Player /> with a frozen video 1`] = `
+<div
+  class="player__Container-c8891x-0"
+>
+  <button
+    class="player__Button-c8891x-4 lguZOn"
+  >
+    Play
+  </button>
+</div>
+`;
