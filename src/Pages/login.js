@@ -62,7 +62,7 @@ export default function Login(){
 
             <Login_Form.Base onSubmit={handleLogin} method ="POST">
 
-                <Login_Form.Input placeholder = "Email Adress" value ={emailId} onChange={({target}) => setEmail(target.value)} />
+                <Login_Form.Input placeholder = "Email Address" value ={emailId} onChange={({target}) => setEmail(target.value)} />
                 <Login_Form.Input placeholder = "Enter Password here " value ={password} onChange={({target}) => setPassword(target.value)} />
                 <Login_Form.Submit disabled ={isInvalid} type = "submit">
                     Log In
