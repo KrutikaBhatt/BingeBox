@@ -6,8 +6,8 @@ import {BrowseContainer} from '../Container/browse';
 export default function Browse(){
     const {series} = useContexthook('series');
     const {films} = useContexthook('films');
-
-    const slides = selectionFilter({series,films});
+    const {India} = useContexthook('India');
+    const slides = selectionFilter({series,films,India});
     console.log(slides);
     return(
     <BrowseContainer slides ={slides}/>

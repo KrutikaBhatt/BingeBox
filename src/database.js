@@ -530,7 +530,7 @@ export function sendDatabase(firebase) {
     */
 
     // Popular in India
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Roohi',
       description:
@@ -540,7 +540,7 @@ export function sendDatabase(firebase) {
       slug: 'roohi',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Zindagi Na Milegi Dobara',
       description:
@@ -550,7 +550,7 @@ export function sendDatabase(firebase) {
       slug: 'zindagi-na-milegi-dobara',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: '3 Idiots',
       description:
@@ -560,7 +560,7 @@ export function sendDatabase(firebase) {
       slug: '3-idiots',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Article 15',
       description:
@@ -570,7 +570,7 @@ export function sendDatabase(firebase) {
       slug: 'article-15',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Bareilly Ki Barfi',
       description:
@@ -580,7 +580,7 @@ export function sendDatabase(firebase) {
       slug: 'bareilly-ki-barfi',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Drishyam',
       description:
@@ -590,7 +590,7 @@ export function sendDatabase(firebase) {
       slug: 'drishyam',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Welcome',
       description:
@@ -600,7 +600,7 @@ export function sendDatabase(firebase) {
       slug: 'welcome',
     });
     
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Queen',
       description:
@@ -610,7 +610,7 @@ export function sendDatabase(firebase) {
       slug: 'queen',
     });
     
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Kabir Singh',
       description:
@@ -620,7 +620,7 @@ export function sendDatabase(firebase) {
       slug: 'kabir-singh',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Dangal',
       description:
@@ -630,7 +630,7 @@ export function sendDatabase(firebase) {
       slug: 'dangal',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Gunjan Saxena: The Kargil Girl',
       description:
@@ -640,7 +640,7 @@ export function sendDatabase(firebase) {
       slug: 'gunjan-saxena-the-kargil-girl',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Phir Hera Pheri',
       description:
@@ -650,7 +650,7 @@ export function sendDatabase(firebase) {
       slug: 'phir-hera-pheri',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Special 26',
       description:
@@ -660,7 +660,7 @@ export function sendDatabase(firebase) {
       slug: 'special-26',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Andhadhun',
       description:
@@ -670,7 +670,7 @@ export function sendDatabase(firebase) {
       slug: 'andhadhun',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Yeh Jawaani Hai Deewani',
       description:
@@ -680,7 +680,7 @@ export function sendDatabase(firebase) {
       slug: 'yeh-jawaani-hai-deewani',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Naam Shabhana',
       description:
@@ -690,7 +690,7 @@ export function sendDatabase(firebase) {
       slug: 'naam-shabhana',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Barfi!',
       description:
@@ -700,7 +700,7 @@ export function sendDatabase(firebase) {
       slug: 'barfi',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Haider',
       description:
@@ -710,7 +710,7 @@ export function sendDatabase(firebase) {
       slug: 'haider',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Dear Zindagi',
       description:
@@ -720,7 +720,7 @@ export function sendDatabase(firebase) {
       slug: 'dear-zindagi',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
       title: 'Mom',
       description:
