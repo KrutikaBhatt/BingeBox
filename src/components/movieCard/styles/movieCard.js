@@ -54,7 +54,7 @@ export const SubTitle = styled.p`
 
 export const Text = styled.p`
   margin-top: 5px;
-  font-size: 13px;
+  font-size: 16px;
   font-family: sans-sherif;
   color: #fff;
   margin-bottom: 0;

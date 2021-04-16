@@ -97,7 +97,7 @@ export const FeatureCallOut = styled.h2`
 export const Link = styled.p`
   color: #fff;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 30px;
   font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;

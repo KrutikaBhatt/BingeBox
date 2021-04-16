@@ -11,7 +11,6 @@ export default function Login(){
 
     const history = useHistory();
     const { firebase } = useContext(FirebaseContext);
-
     const [emailId,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');

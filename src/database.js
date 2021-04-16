@@ -173,16 +173,7 @@ export function sendDatabase(firebase) {
       slug: 'making-a-murderer',
       
     });
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Long Shot',
-      description:
-        'An innocent man is accused of murder, leading his attorney on a wild chase to confirm his alibi using raw footage from a television show.',
-      genre: 'crime',
-      maturity: '18',
-      slug: 'long-shot',
-      
-    });
+    
     firebase.firestore().collection('series').add({
       id: getUUID(),
       title: 'The Confession Killer',
@@ -211,58 +202,6 @@ export function sendDatabase(firebase) {
       genre: 'crime',
       maturity: '18',
       slug: 'the-staircase',
-      
-    });
-  
-    // Feel-good
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Good Will Hunting',
-      description:
-        'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'good-will-hunting',
-      
-    });
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Forrest Gump',
-      description:
-        'Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.',
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'forrest-gump',
-      
-    });
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Juno',
-      description:
-        "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'juno',
-      
-    });
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'Midnight In Paris',
-      description:
-        'Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.',
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'midnight-in-paris',
-      
-    });
-    firebase.firestore().collection('series').add({
-      id: getUUID(),
-      title: 'School of Rock',
-      description:
-        "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'school-of-rock',
       
     });
   
@@ -530,204 +469,304 @@ export function sendDatabase(firebase) {
     */
 
     // Popular in India
-    firebase.firestore().collection('India').add({
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Roohi',
+    //   description:
+    //     'Roohi is set in a fictional town of North India. The film revolves around two small-town boys Bhaura and Kattanni who are stuck in a forest with Roohi. But there’s an insidious spirit following them with feet turned backwards.',
+    //   genre: 'horror',
+    //   maturity: '16',
+    //   slug: 'roohi',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Zindagi Na Milegi Dobara',
+    //   description:
+    //     'Three friends who were inseparable in childhood decide to go on a three-week-long bachelor road trip to Spain, in order to re-establish their bond and explore thrilling adventures, before one of them gets married. What will they learn of themselves and each other during the adventure?',
+    //   genre: 'comedy',
+    //   maturity: '14',
+    //   slug: 'zindagi-na-milegi-dobara',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: '3 Idiots',
+    //   description:
+    //     "In the tradition of “Ferris Bueller’s Day Off” comes this refreshing comedy about a rebellious prankster with a crafty mind and a heart of gold. Rascal. Joker. Dreamer. Genius... You've never met a college student quite like \"Rancho.\" From the moment he arrives at India's most prestigious university, Rancho's outlandish schemes turn the campus upside down—along with the lives of his two newfound best friends. Together, they make life miserable for \"Virus,\" the school’s uptight and heartless dean. But when Rancho catches the eye of the dean's sexy daughter, Virus sets his sights on flunking out the \"3 idiots\" once and for all.",
+    //   genre: 'comedy',
+    //   maturity: '12',
+    //   slug: '3-idiots',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Article 15',
+    //   description:
+    //     'A young IPS officer’s new posting in rural India has him confronting caste disparities and uncomfortable truths in the face of a gruesome crime. When three girls go missing in the fictional village of Lalgaon, two of them are found dead and there is no trace of the third one. Where is she and who is responsible for this heinous act?',
+    //   genre: 'crime',
+    //   maturity: '18',
+    //   slug: 'article-15',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Bareilly Ki Barfi',
+    //   description:
+    //     'Bitti Mishra is a bohemian Bareilly girl who falls deeply in love with Pritam Vidrohi, an author because she admires his progressive way of thinking. Finding him though proves to be as hard as looking for a needle in the haystack. So Bitti seeks the help of the local printing press-owner, Chirag Dubey on her journey of love.',
+    //   genre: 'romance',
+    //   maturity: '14',
+    //   slug: 'bareilly-ki-barfi',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Drishyam',
+    //   description:
+    //     'A simple, street-smart man tries to protect his family from a tough cop looking for his missing son.',
+    //   genre: 'thriller',
+    //   maturity: '16',
+    //   slug: 'drishyam',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Welcome',
+    //   description:
+    //     "Dubai-based criminal don Uday takes it upon himself to try and get his sister Sanjana married - in vain, as no one wants to be associated with a crime family. Uday's associate Sagar Pandey finds a young man, Rajiv, who lives with his maternal uncle and aunt - Dr. and Mrs. Ghunghroo. Through extortion he compels Ghunghroo to accept this matrimonial alliance. But Rajiv has already fallen in love with young woman in South Africa. When the time comes to get Rajiv formally engaged to this woman, he finds out that Sanjana and she are the very same. With no escape from this predicament, the wedding is planned, with hilarious consequences.",
+    //   genre: 'comedy',
+    //   maturity: '12',
+    //   slug: 'welcome',
+    // });
+    
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Queen',
+    //   description:
+    //     "Rani, a 24-year-old homely girl, decides to go on her honeymoon alone when her fiancé calls off the wedding. Traveling around Europe, she finds joy, makes friends, and gains new-found independence.",
+    //   genre: 'comedy',
+    //   maturity: '14',
+    //   slug: 'queen',
+    // });
+    
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Kabir Singh',
+    //   description:
+    //     "When his girlfriend is forced to marry another man, a troubled young surgeon begins to self-destruct.",
+    //   genre: 'drama',
+    //   maturity: '16',
+    //   slug: 'kabir-singh',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Dangal',
+    //   description:
+    //     "Dangal is an extraordinary true story based on the life of Mahavir Singh and his two daughters, Geeta and Babita Phogat. The film traces the inspirational journey of a father who trains his daughters to become world class wrestlers.",
+    //   genre: 'action',
+    //   maturity: '13',
+    //   slug: 'dangal',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Gunjan Saxena: The Kargil Girl',
+    //   description:
+    //     "Inspired by the life of a fearless young officer who made history by becoming the first Indian female Air Force officer to fly in a combat zone during the 1999 Kargil War",
+    //   genre: 'action',
+    //   maturity: '14',
+    //   slug: 'gunjan-saxena-the-kargil-girl',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Phir Hera Pheri',
+    //   description:
+    //     "Babu Rao, Raju and Shyam, are living happily after having risen from rags to riches. Still, money brings the joy of riches and with it the greed to make more money - and so, with a don as an unknowing investor, Raju initiates a new game.",
+    //   genre: 'comedy',
+    //   maturity: '12',
+    //   slug: 'phir-hera-pheri',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Special 26',
+    //   description:
+    //     "In the early 1980s in India, a group of con artists rob well-known businessmen and politicians by posing as officers of the Central Bureau of Intelligence or income tax officials. The gang stages fake raids during which they steal great amounts of money from their targets.",
+    //   genre: 'thriller',
+    //   maturity: '14',
+    //   slug: 'special-26',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Andhadhun',
+    //   description:
+    //     "A series of mysterious events changes the life of a blind pianist who now must report a crime that was actually never witnessed by him.",
+    //   genre: 'crime',
+    //   maturity: '15',
+    //   slug: 'andhadhun',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Yeh Jawaani Hai Deewani',
+    //   description:
+    //     "Bunny and Naina meet when they graduate from college and again in their late 20s.",
+    //   genre: 'romance',
+    //   maturity: '15',
+    //   slug: 'yeh-jawaani-hai-deewani',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Naam Shabhana',
+    //   description:
+    //     "Shabana Khan is the special agent who is entrusted the task of assassinating a deadly arms dealer by the Indian Intelligence Agencies.",
+    //   genre: 'thriller',
+    //   maturity: '15',
+    //   slug: 'naam-shabhana',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Barfi!',
+    //   description:
+    //     "He is cute. He's shrewd. The girls love him. The cops hate him. He can't speak but is always talked about. His naughty antics will make you scream, but he will never listen. Cos he can't! Next summer ride a rollercoaster of emotions with Barfii - the Chalu Chaplin!",
+    //   genre: 'drama',
+    //   maturity: '12',
+    //   slug: 'barfi',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Haider',
+    //   description:
+    //     "A young man returns to Kashmir after his father's disappearance to confront his uncle - the man he suspects to have a role in his father's fate.",
+    //   genre: 'action',
+    //   maturity: '16',
+    //   slug: 'haider',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Dear Zindagi',
+    //   description:
+    //     "An unconventional thinker helps a budding cinematographer gain a new perspective on life.",
+    //   genre: 'drama',
+    //   maturity: '14',
+    //   slug: 'dear-zindagi',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Mom',
+    //   description:
+    //     "The bliss of a biology teacher’s family life in Delhi is shattered when her daughter, Arya is physically assaulted by Jagan and gang. Does Devki Sabarwal wait for the law to take its course? Or does Devki become Maa Durga and hunt down the perpetrators of the crime?",
+    //   genre: 'crime',
+    //   maturity: '16',
+    //   slug: 'mom',
+    // });
+
+    // firebase.firestore().collection('series').add({
+    //   id: getUUID(),
+    //   title: 'Our Planet',
+    //   description:
+    //     "Experience our planet's natural beauty and examine how climate change impacts all living creatures in this ambitious documentary of spectacular scope.",
+    //   genre: 'documentaries',
+    //   maturity: '16',
+    //   slug: 'our-planet',
+    // });
+
+    firebase.firestore().collection('series').add({
       id: getUUID(),
-      title: 'Roohi',
+      title: 'Day Break',
       description:
-        'Roohi is set in a fictional town of North India. The film revolves around two small-town boys Bhaura and Kattanni who are stuck in a forest with Roohi. But there’s an insidious spirit following them with feet turned backwards.',
-      genre: 'horror',
-      maturity: '16',
-      slug: 'roohi',
+        "Living his best life in post-apocalyptic LA, a slacker strives to find the girl of his dreams while outwitting mindless ghouls and cliquish gangs.",
+      genre: 'comedies',
+      maturity: '18',
+      slug: 'day-break',
     });
 
-    firebase.firestore().collection('India').add({
+    firebase.firestore().collection('series').add({
       id: getUUID(),
-      title: 'Zindagi Na Milegi Dobara',
+      title: 'Wizards: Tales of Arcadia',
       description:
-        'Three friends who were inseparable in childhood decide to go on a three-week-long bachelor road trip to Spain, in order to re-establish their bond and explore thrilling adventures, before one of them gets married. What will they learn of themselves and each other during the adventure?',
-      genre: 'comedy',
-      maturity: '14',
-      slug: 'zindagi-na-milegi-dobara',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: '3 Idiots',
-      description:
-        "In the tradition of “Ferris Bueller’s Day Off” comes this refreshing comedy about a rebellious prankster with a crafty mind and a heart of gold. Rascal. Joker. Dreamer. Genius... You've never met a college student quite like \"Rancho.\" From the moment he arrives at India's most prestigious university, Rancho's outlandish schemes turn the campus upside down—along with the lives of his two newfound best friends. Together, they make life miserable for \"Virus,\" the school’s uptight and heartless dean. But when Rancho catches the eye of the dean's sexy daughter, Virus sets his sights on flunking out the \"3 idiots\" once and for all.",
-      genre: 'comedy',
+        "Merlin’s apprentice joins Arcadia’s heroes on a time-bending adventure in Camelot, where conflict is brewing between the human, troll and magical worlds.",
+      genre: 'children',
       maturity: '12',
-      slug: '3-idiots',
+      slug: 'wizards-tales-of-arcadia',
     });
 
-    firebase.firestore().collection('India').add({
+    firebase.firestore().collection('series').add({
       id: getUUID(),
-      title: 'Article 15',
+      title: 'Undercover',
       description:
-        'A young IPS officer’s new posting in rural India has him confronting caste disparities and uncomfortable truths in the face of a gruesome crime. When three girls go missing in the fictional village of Lalgaon, two of them are found dead and there is no trace of the third one. Where is she and who is responsible for this heinous act?',
+        "Undercover agents infiltrate a drug kingpin's operation by posing as a couple at the campground where he spends his weekends. Inspired by real events.",
       genre: 'crime',
       maturity: '18',
-      slug: 'article-15',
+      slug: 'undercover',
     });
 
-    firebase.firestore().collection('India').add({
+    firebase.firestore().collection('series').add({
       id: getUUID(),
-      title: 'Bareilly Ki Barfi',
+      title: 'The Sinner',
       description:
-        'Bitti Mishra is a bohemian Bareilly girl who falls deeply in love with Pritam Vidrohi, an author because she admires his progressive way of thinking. Finding him though proves to be as hard as looking for a needle in the haystack. So Bitti seeks the help of the local printing press-owner, Chirag Dubey on her journey of love.',
-      genre: 'romance',
-      maturity: '14',
-      slug: 'bareilly-ki-barfi',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Drishyam',
-      description:
-        'A simple, street-smart man tries to protect his family from a tough cop looking for his missing son.',
-      genre: 'thriller',
-      maturity: '16',
-      slug: 'drishyam',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Welcome',
-      description:
-        "Dubai-based criminal don Uday takes it upon himself to try and get his sister Sanjana married - in vain, as no one wants to be associated with a crime family. Uday's associate Sagar Pandey finds a young man, Rajiv, who lives with his maternal uncle and aunt - Dr. and Mrs. Ghunghroo. Through extortion he compels Ghunghroo to accept this matrimonial alliance. But Rajiv has already fallen in love with young woman in South Africa. When the time comes to get Rajiv formally engaged to this woman, he finds out that Sanjana and she are the very same. With no escape from this predicament, the wedding is planned, with hilarious consequences.",
-      genre: 'comedy',
-      maturity: '12',
-      slug: 'welcome',
-    });
-    
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Queen',
-      description:
-        "Rani, a 24-year-old homely girl, decides to go on her honeymoon alone when her fiancé calls off the wedding. Traveling around Europe, she finds joy, makes friends, and gains new-found independence.",
-      genre: 'comedy',
-      maturity: '14',
-      slug: 'queen',
-    });
-    
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Kabir Singh',
-      description:
-        "When his girlfriend is forced to marry another man, a troubled young surgeon begins to self-destruct.",
-      genre: 'drama',
-      maturity: '16',
-      slug: 'kabir-singh',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Dangal',
-      description:
-        "Dangal is an extraordinary true story based on the life of Mahavir Singh and his two daughters, Geeta and Babita Phogat. The film traces the inspirational journey of a father who trains his daughters to become world class wrestlers.",
-      genre: 'action',
-      maturity: '13',
-      slug: 'dangal',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Gunjan Saxena: The Kargil Girl',
-      description:
-        "Inspired by the life of a fearless young officer who made history by becoming the first Indian female Air Force officer to fly in a combat zone during the 1999 Kargil War",
-      genre: 'action',
-      maturity: '14',
-      slug: 'gunjan-saxena-the-kargil-girl',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Phir Hera Pheri',
-      description:
-        "Babu Rao, Raju and Shyam, are living happily after having risen from rags to riches. Still, money brings the joy of riches and with it the greed to make more money - and so, with a don as an unknowing investor, Raju initiates a new game.",
-      genre: 'comedy',
-      maturity: '12',
-      slug: 'phir-hera-pheri',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Special 26',
-      description:
-        "In the early 1980s in India, a group of con artists rob well-known businessmen and politicians by posing as officers of the Central Bureau of Intelligence or income tax officials. The gang stages fake raids during which they steal great amounts of money from their targets.",
-      genre: 'thriller',
-      maturity: '14',
-      slug: 'special-26',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Andhadhun',
-      description:
-        "A series of mysterious events changes the life of a blind pianist who now must report a crime that was actually never witnessed by him.",
-      genre: 'crime',
-      maturity: '15',
-      slug: 'andhadhun',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Yeh Jawaani Hai Deewani',
-      description:
-        "Bunny and Naina meet when they graduate from college and again in their late 20s.",
-      genre: 'romance',
-      maturity: '15',
-      slug: 'yeh-jawaani-hai-deewani',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Naam Shabhana',
-      description:
-        "Shabana Khan is the special agent who is entrusted the task of assassinating a deadly arms dealer by the Indian Intelligence Agencies.",
-      genre: 'thriller',
-      maturity: '15',
-      slug: 'naam-shabhana',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Barfi!',
-      description:
-        "He is cute. He's shrewd. The girls love him. The cops hate him. He can't speak but is always talked about. His naughty antics will make you scream, but he will never listen. Cos he can't! Next summer ride a rollercoaster of emotions with Barfii - the Chalu Chaplin!",
-      genre: 'drama',
-      maturity: '12',
-      slug: 'barfi',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Haider',
-      description:
-        "A young man returns to Kashmir after his father's disappearance to confront his uncle - the man he suspects to have a role in his father's fate.",
-      genre: 'action',
-      maturity: '16',
-      slug: 'haider',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Dear Zindagi',
-      description:
-        "An unconventional thinker helps a budding cinematographer gain a new perspective on life.",
-      genre: 'drama',
-      maturity: '14',
-      slug: 'dear-zindagi',
-    });
-
-    firebase.firestore().collection('India').add({
-      id: getUUID(),
-      title: 'Mom',
-      description:
-        "The bliss of a biology teacher’s family life in Delhi is shattered when her daughter, Arya is physically assaulted by Jagan and gang. Does Devki Sabarwal wait for the law to take its course? Or does Devki become Maa Durga and hunt down the perpetrators of the crime?",
+        "A young mother kills a stranger in a fit of unexplainable rage. An inquisitive detective obsesses over the case, attempting to get to the bottom of the true motive behind the act.",
       genre: 'crime',
       maturity: '16',
-      slug: 'mom',
+      slug: 'the-sinner',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Midnight In Paris',
+      description:
+        'Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.',
+      genre: 'feel-good',
+      maturity: '12',
+      slug: 'midnight-in-paris',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'School of Rock',
+      description:
+        "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
+      genre: 'feel-good',
+      maturity: '12',
+      slug: 'school-of-rock',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Juno',
+      description:
+        "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
+      genre: 'feel-good',
+      maturity: '12',
+      slug: 'juno',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Forrest Gump',
+      description:
+        'Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.',
+      genre: 'feel-good',
+      maturity: '12',
+      slug: 'forrest-gump',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Good Will Hunting',
+      description:
+        'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
+      genre: 'feel-good',
+      maturity: '12',
+      slug: 'good-will-hunting',
     });
   }
   
