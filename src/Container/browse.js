@@ -51,7 +51,7 @@ export function BrowseContainer({slides}){
       <Header src="joker1" dontShowOnSmallViewPort>
       <Header.Frame>
         <Header.Group>
-                <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Bing Box" />
+                <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Binge Box" />
                 <Header.TextLink active={category === 'series' ? 'true' : 'false'} onClick={() => setCategory('series')}>
               Series
             </Header.TextLink>

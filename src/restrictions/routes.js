@@ -31,7 +31,7 @@ export function ProtectedBrowse({ user, children, ...rest }) {
       <Route
         {...rest}
         render={({ location }) => {
-          if (user) {
+          if (user == null) {
             return children;
           }
   

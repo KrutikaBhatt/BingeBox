@@ -31,9 +31,9 @@ export const Base = styled.form`
 `;
 
 export const Title = styled.h1`
-  padding-left: 34%;
+  padding-left: 33%;
   color: #fff;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 28px;
 `;
@@ -78,7 +78,7 @@ export const Input = styled.input`
 export const Submit = styled.button`
   background: #1A74E2;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 24px 0 12px;
   padding: 16px;
@@ -90,6 +90,7 @@ export const Submit = styled.button`
     opacity: 0.5;
   }
 `;
+
 export const Reset = styled.p`
   margin-top: 15px;
   font-size: 18px;
@@ -97,4 +98,8 @@ export const Reset = styled.p`
   color: #ED2939;
   cursor :pointer;
 
+  &:hover {
+    text-decoration: underline;
+    color: white;
+  }
 `;
