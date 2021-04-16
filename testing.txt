@@ -5,3 +5,8 @@ In package.json :
 
 1 . Create the jest array and enter the root directory
     Enter the coverage Threshold and coverage Reporters in the jest itself
+
+2. Errors while testing : <Login_Form /> › renders the <Login_Form /> with populated data
+
+    ForwardRef(Link)(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.
+Solution : https://github.com/testing-library/react-testing-library/issues/663

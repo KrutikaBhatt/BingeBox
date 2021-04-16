@@ -58,6 +58,9 @@ export function BrowseContainer({slides}){
             <Header.TextLink active={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
               Films
             </Header.TextLink>
+            <Header.TextLink active={category === 'India' ? 'true' : 'false'} onClick={() => setCategory('India')}>
+              India
+            </Header.TextLink>
         </Header.Group>
         <Header.Group>
           <Header.SearchBar searchTerm={searchTerm} setsearchTerm ={setsearchTerm} />

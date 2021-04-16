@@ -1,6 +1,6 @@
 
 //Filtering movies and series based on the selection
-export default function  selectionFilter({series,films}){
+export default function  selectionFilter({series,films,India}){
     return{
         series: [
             {
@@ -48,5 +48,33 @@ export default function  selectionFilter({series,films}){
                 data: films?.filter((item) => item.genre === 'romance') 
             },
           ],
+
+        India :[
+            {
+                title :'Comedy',
+                data :India?.filter((item) => item.genre ==='comedy')
+
+            },
+            {
+                title :'Drama',
+                data :India?.filter((item) =>item.genre == 'drama')
+            },
+            {
+                title :'Action',
+                data : India?.filter((item) =>item.genre == 'action')
+            },
+            {
+                title :'Romance',
+                data :India?.filter((item) =>item.genre =='romance')
+            },
+            {
+                title :'Thriller',
+                data :India?.filter((item) =>item.genre =='thriller')
+            },
+            {
+                title :'Crime',
+                data :India?.filter((item) =>item.genre =='crime')
+            },
+        ]
     }
 }
