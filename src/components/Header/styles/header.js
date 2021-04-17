@@ -123,7 +123,7 @@ export const SearchInput = styled.input`
   color: white;
   border: 1px solid white;
   transition: width 0.5s;
-  height: 30px;
+  height: 35px;
   font-size: 14px;
   border-radius: 4px;
   margin-left: ${({ active }) => (active === true ? '10px' : '0')};
@@ -155,8 +155,8 @@ export const SearchIcon = styled.button`
   background-color: transparent;
   border: 0;
   outline: 0;
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -164,7 +164,7 @@ export const SearchIcon = styled.button`
 
   img {
     filter: brightness(0) invert(1);
-    width: 16px;
+    width: 18px;
   }
 `;
 
@@ -172,8 +172,8 @@ export const Picture = styled.button`
   background: url(${({ src }) => src});
   background-size: contain;
   border: 0;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
 `;
 

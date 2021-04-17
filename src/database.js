@@ -679,94 +679,154 @@ export function sendDatabase(firebase) {
     //   slug: 'our-planet',
     // });
 
-    firebase.firestore().collection('series').add({
+    // firebase.firestore().collection('series').add({
+    //   id: getUUID(),
+    //   title: 'Day Break',
+    //   description:
+    //     "Living his best life in post-apocalyptic LA, a slacker strives to find the girl of his dreams while outwitting mindless ghouls and cliquish gangs.",
+    //   genre: 'comedies',
+    //   maturity: '18',
+    //   slug: 'day-break',
+    // });
+
+    // firebase.firestore().collection('series').add({
+    //   id: getUUID(),
+    //   title: 'Wizards: Tales of Arcadia',
+    //   description:
+    //     "Merlin’s apprentice joins Arcadia’s heroes on a time-bending adventure in Camelot, where conflict is brewing between the human, troll and magical worlds.",
+    //   genre: 'children',
+    //   maturity: '12',
+    //   slug: 'wizards-tales-of-arcadia',
+    // });
+
+    // firebase.firestore().collection('series').add({
+    //   id: getUUID(),
+    //   title: 'Undercover',
+    //   description:
+    //     "Undercover agents infiltrate a drug kingpin's operation by posing as a couple at the campground where he spends his weekends. Inspired by real events.",
+    //   genre: 'crime',
+    //   maturity: '18',
+    //   slug: 'undercover',
+    // });
+
+    // firebase.firestore().collection('series').add({
+    //   id: getUUID(),
+    //   title: 'The Sinner',
+    //   description:
+    //     "A young mother kills a stranger in a fit of unexplainable rage. An inquisitive detective obsesses over the case, attempting to get to the bottom of the true motive behind the act.",
+    //   genre: 'crime',
+    //   maturity: '16',
+    //   slug: 'the-sinner',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Midnight In Paris',
+    //   description:
+    //     'Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.',
+    //   genre: 'feel-good',
+    //   maturity: '12',
+    //   slug: 'midnight-in-paris',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'School of Rock',
+    //   description:
+    //     "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
+    //   genre: 'feel-good',
+    //   maturity: '12',
+    //   slug: 'school-of-rock',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Juno',
+    //   description:
+    //     "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
+    //   genre: 'feel-good',
+    //   maturity: '12',
+    //   slug: 'juno',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Forrest Gump',
+    //   description:
+    //     'Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.',
+    //   genre: 'feel-good',
+    //   maturity: '12',
+    //   slug: 'forrest-gump',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Good Will Hunting',
+    //   description:
+    //     'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
+    //   genre: 'feel-good',
+    //   maturity: '12',
+    //   slug: 'good-will-hunting',
+    // });
+
+    firebase.firestore().collection('films').add({
       id: getUUID(),
-      title: 'Day Break',
+      title: 'The Devil All the Time',
       description:
-        "Living his best life in post-apocalyptic LA, a slacker strives to find the girl of his dreams while outwitting mindless ghouls and cliquish gangs.",
-      genre: 'comedies',
+        'In Knockemstiff, Ohio and its neighboring backwoods, sinister characters converge around young Arvin Russell as he fights the evil forces that threaten him and his family.',
+      genre: 'drama',
       maturity: '18',
-      slug: 'day-break',
+      slug: 'the-devil-all-the-time',
     });
 
-    firebase.firestore().collection('series').add({
+    firebase.firestore().collection('films').add({
       id: getUUID(),
-      title: 'Wizards: Tales of Arcadia',
+      title: 'Fractured',
       description:
-        "Merlin’s apprentice joins Arcadia’s heroes on a time-bending adventure in Camelot, where conflict is brewing between the human, troll and magical worlds.",
+        'Driving cross-country, Ray and his wife and daughter stop at a highway rest area where his daughter falls and breaks her arm. After a frantic rush to the hospital and a clash with the check-in nurse, Ray is finally able to get her to a doctor. While the wife and daughter go downstairs for an MRI, Ray, exhausted, passes out in a chair in the lobby. Upon waking up, they have no record or knowledge of Ray\'s family ever being checked in.',
+      genre: 'thriller',
+      maturity: '16',
+      slug: 'fractured',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Wine Country',
+      description:
+        'A group of friends head to the land of oaky Chardonnays and big, bold Cabernet Sauvignons for one member of the squad’s 50th birthday party.',
+      genre: 'feel-good',
+      maturity: '16',
+      slug: 'wine-country',
+    });
+
+    firebase.firestore().collection('films').add({
+      id: getUUID(),
+      title: 'Klaus',
+      description:
+        'When Jesper distinguishes himself as the Postal Academy\'s worst student, he is sent to Smeerensburg, a small village located on an icy island above the Arctic Circle, where grumpy inhabitants barely exchange words, let alone letters. Jesper is about to give up and abandon his duty as a postman when he meets local teacher Alva and Klaus, a mysterious carpenter who lives alone in a cabin full of handmade toys.',
       genre: 'children',
       maturity: '12',
-      slug: 'wizards-tales-of-arcadia',
+      slug: 'klaus',
     });
 
-    firebase.firestore().collection('series').add({
+    firebase.firestore().collection('films').add({
       id: getUUID(),
-      title: 'Undercover',
+      title: 'Extraction',
       description:
-        "Undercover agents infiltrate a drug kingpin's operation by posing as a couple at the campground where he spends his weekends. Inspired by real events.",
-      genre: 'crime',
-      maturity: '18',
-      slug: 'undercover',
+        'Tyler Rake, a fearless mercenary who offers his services on the black market, embarks on a dangerous mission when he is hired to rescue the kidnapped son of a Mumbai crime lord.',
+      genre: 'suspense',
+      maturity: '15',
+      slug: 'extraction',
     });
 
-    firebase.firestore().collection('series').add({
+    firebase.firestore().collection('films').add({
       id: getUUID(),
-      title: 'The Sinner',
+      title: 'Five Feet Apart',
       description:
-        "A young mother kills a stranger in a fit of unexplainable rage. An inquisitive detective obsesses over the case, attempting to get to the bottom of the true motive behind the act.",
-      genre: 'crime',
+        'Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control — all of which get put to the test when she meets Will, an impossibly charming teen who has the same illness.',
+      genre: 'romance',
       maturity: '16',
-      slug: 'the-sinner',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Midnight In Paris',
-      description:
-        'Gil arrives with his fiancee and her family in Paris for a vacation, even as he tries to finish his debut novel. He is beguiled by the city, which takes him to a time past, away from his fiancee.',
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'midnight-in-paris',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'School of Rock',
-      description:
-        "Dewey Finn, an amateur rock enthusiast, slyly takes up his friend's substitute teacher's job. Bearing no qualifications for it, he instead starts training the students to form a band.",
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'school-of-rock',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Juno',
-      description:
-        "Social misfit Juno protects herself with a caustic wit, but her unplanned pregnancy has the teen getting more involved in the lives of her baby's adoptive parents than she expected.",
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'juno',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Forrest Gump',
-      description:
-        'Forrest Gump, a man with a low IQ, joins the army for service where he meets Dan and Bubba. However, he cannot stop thinking about his childhood sweetheart Jenny Curran, whose life is messed up.',
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'forrest-gump',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Good Will Hunting',
-      description:
-        'Will Hunting, a genius in mathematics, solves all the difficult mathematical problems. When he faces an emotional crisis, he takes help from psychiatrist Dr Sean Maguireto, who helps him recover.',
-      genre: 'feel-good',
-      maturity: '12',
-      slug: 'good-will-hunting',
+      slug: 'five-feet-apart',
     });
   }
   

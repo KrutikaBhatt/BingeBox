@@ -11,7 +11,7 @@ import {FooterContainer} from '../Container/footer';
 export function BrowseContainer({slides}){
 
     const [profile,setProfile] = useState({});
-    const [category, setCategory] = useState('series');
+    const [category, setCategory] = useState('films');
     const [loading,setLoading] = useState(true);
     //const [category, setCategory] = useState('series');
     const [searchTerm, setsearchTerm] = useState('');
@@ -52,11 +52,11 @@ export function BrowseContainer({slides}){
       <Header.Frame>
         <Header.Group>
                 <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Binge Box" />
-                <Header.TextLink active={category === 'series' ? 'true' : 'false'} onClick={() => setCategory('series')}>
-              Series
-            </Header.TextLink>
-            <Header.TextLink active={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
+                <Header.TextLink active={category === 'films' ? 'true' : 'false'} onClick={() => setCategory('films')}>
               Films
+            </Header.TextLink>
+            <Header.TextLink active={category === 'series' ? 'true' : 'false'} onClick={() => setCategory('series')}>
+              Series
             </Header.TextLink>
             <Header.TextLink active={category === 'India' ? 'true' : 'false'} onClick={() => setCategory('India')}>
               India
