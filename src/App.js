@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ROUTES from './Routes_System/routes';
-import {BrowserRouter as Router,Switch} from 'react-router-dom';
-import {HOME,Browse,SignUp,Login,Payment} from './Pages';
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {HOME,Browse,SignUp,Login,Payment,Profile,MyList} from './Pages';
 import {IsUserRedirect, ProtectedBrowse,ProtectedPaymentGateway} from './restrictions/routes';
 import { AuthListner} from './custom-hooks';
 
@@ -36,6 +36,13 @@ export default function App() {
       <Payment />
      </ProtectedPaymentGateway>
      </Switch>
+
+     <Route exact path ={ROUTES.profile}>
+        <Profile />
+    </Route>
+    <Route exact path ={ROUTES.MyList}>
+      <MyList />
+    </Route>
     </Router>
   );
 }

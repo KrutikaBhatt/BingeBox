@@ -9,12 +9,12 @@ import {FooterContainer} from '../Container/footer';
 import { PlayButton } from '../components/Header/styles/header';
 import axios from 'axios';
 import './Row.css';
+import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
+import { useHistory } from 'react-router-dom';
 
 export function BrowseContainer({slides}){
 
-  function AddToWishList(Id){
-    console.log(Id);
-  }
+    const history = useHistory();
     const [profile,setProfile] = useState({});
     const [category, setCategory] = useState('films');
     const [loading,setLoading] = useState(true);
@@ -28,6 +28,7 @@ export function BrowseContainer({slides}){
     const user = firebase.auth().currentUser || {};
     const [content,setcontent] = useState([]);  // By default will be an array
     const [userId,setUserId] = useState('');
+    const [recommend,setRecommend] = useState([]);
 
     useEffect(() =>{
       setUserId(user.uid);
@@ -57,6 +58,20 @@ export function BrowseContainer({slides}){
 
         useEffect(()=>{
             
+          const api = 'http://localhost:8080/movie/recommend/'+user.uid;
+          console.log(api);
+          axios.get(api).then((res) =>{
+              setRecommend(res.data);
+              console.log("The recommended stuff :",res.data);
+          })
+          .catch((error)=>{
+              console.log("Error occurred due to Recommendation ");
+              console.log(error.message);
+          });
+      },[user.uid]);
+
+        useEffect(()=>{
+            
             const api = 'http://localhost:8080/movie/showContinueWatching/'+user.uid;
             console.log(api);
             axios.get(api).then((res) =>{
@@ -68,6 +83,7 @@ export function BrowseContainer({slides}){
                 console.log(error.message);
             });
         },[user.uid]);
+
     return profile.displayName ?(
       
       <>
@@ -95,11 +111,20 @@ export function BrowseContainer({slides}){
             <Header.Picture src ={user.photoURL} />
             <Header.Dropdown>
               <Header.Group>
-                <Header.Picture src ={user.photoURL}/>
-                <Header.TextLink>{user.displayName}</Header.TextLink>
+                <Header.Picture src ={user.photoURL} onClick={() =>{history.push(ROUTES.profile)}}/>
+                <Header.DropItem onClick={() =>{history.push(ROUTES.profile)}}>{user.displayName}</Header.DropItem>
               </Header.Group>
               <Header.Group>
-                <Header.TextLink onClick={()=>firebase.auth().signOut()}>Sign Out</Header.TextLink>
+                <Header.DropItem onClick={() =>{history.push(ROUTES.profile)}}>My Account</Header.DropItem>
+              </Header.Group>
+              <Header.Group>
+                <Header.DropItem onClick={() =>{history.push(ROUTES.MyList)}}>Watch List</Header.DropItem>
+              </Header.Group>
+              <Header.Group>
+                <Header.DropItem onClick={()=>{
+                  firebase.auth().signOut();
+                  history.push(ROUTES.HOME)
+                  }}>Sign Out</Header.DropItem>
               </Header.Group>
             </Header.Dropdown>
           </Header.Profile>
@@ -123,8 +148,21 @@ export function BrowseContainer({slides}){
         </Card.AlignSide>
       </Header.Feature>
       </Header>
+
       <div className ="row">
-      <h2 className="poster_title">Continue Watching</h2>
+      <Card.Title>Recommended for you</Card.Title>
+        <div className ="row_posters_frame">
+          {recommend.map((movie) => (
+            <img 
+            key={movie.id}
+            className="row_poster" 
+            src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
+            alt={movie.title}></img>
+          ))}
+        </div>
+        </div>
+        <div className ="row">
+      <Card.Title>Continue Watching</Card.Title>
         <div className ="row_posters_frame">
           {content.map((movie) => (
             <img 
@@ -135,6 +173,7 @@ export function BrowseContainer({slides}){
           ))}
         </div>
      </div>
+     
       <Card.Group>
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
@@ -153,7 +192,8 @@ export function BrowseContainer({slides}){
             <Card.Feature category={category}>
               <Card.AlignSide>
               <Player>
-                <Player.Button onClick={() =>{
+                <Player.Button />
+                {/* <Player.Button onClick={() =>{
                   console.log("Adding to continue Watching");
                   if(movieId === ''){
                     console.log("Its an empty string");
@@ -167,7 +207,7 @@ export function BrowseContainer({slides}){
                       console.log(res);
                     })
                   }
-                }} />
+                }} /> */}
                 <Player.Video src="/videos/frozen2.mp4" />
               </Player>
               <Card.WatchList category={category} onClick={() =>{

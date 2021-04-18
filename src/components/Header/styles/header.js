@@ -112,6 +112,24 @@ export const Link = styled.p`
   }
 `;
 
+export const DropdownItemLink = styled.p`
+  color: #fff;
+  text-decoration: none;
+  align-items: center;
+  font-size: 20px;
+  margin-right: 30px;
+  font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+  cursor: pointer;
+
+  &:hover {
+    font-weight: bold;
+    color: white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
 
 export const Group = styled.div`
   display: flex;
@@ -179,10 +197,11 @@ export const Picture = styled.button`
 
 export const Dropdown = styled.div`
   display: none;
+  justify-item:center;
   position: absolute;
   background-color: black;
-  padding: 10px;
-  width: 165px;
+  padding: 13px;
+  width: 200px;
   top: 32px;
   right: 10px;
 
