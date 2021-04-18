@@ -16,6 +16,8 @@ import {
   Entities,
   Item,
   Image,
+  AlignSide,
+  WatchList,
 } from './styles/movieCard';
 
 export const FeatureContext = createContext();
@@ -34,7 +36,10 @@ export default function Card({ children, ...restProps }) {
 Card.Group = function CardGroup({ children, ...restProps }) {
   return <Group {...restProps}>{children}</Group>;
 };
-
+Card.AlignSide = function CardAlign({children, ...restProps})
+{
+  return <AlignSide {...restProps}>{children}</AlignSide>
+};
 Card.Title = function CardTitle({ children, ...restProps }) {
   return <Title {...restProps}>{children}</Title>;
 };
@@ -77,7 +82,7 @@ Card.Image = function CardImage({ ...restProps }) {
 
 Card.Feature = function CardFeature({ children, category, ...restProps }) {
   const { showFeature, itemFeature, setShowFeature } = useContext(FeatureContext);
-
+  //console.log(itemFeature.docId);
   return showFeature ? (
     <Feature {...restProps} src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}>
       <Content>
@@ -93,9 +98,13 @@ Card.Feature = function CardFeature({ children, category, ...restProps }) {
             {itemFeature.genre.charAt(0).toUpperCase() + itemFeature.genre.slice(1)}
           </FeatureText>
         </Group>
-
         {children}
       </Content>
     </Feature>
   ) : null;
+};
+
+Card.WatchList = function CardWatchList({ children, category, ...restProps }){
+  //const { itemFeature } = useContext(FeatureContext);
+  return <WatchList {...restProps}>{children}</WatchList>
 };

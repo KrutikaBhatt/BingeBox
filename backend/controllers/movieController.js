@@ -44,33 +44,41 @@ const showWishList = async(req,res,next) =>{
 const showContinueWatching = async(req,res,next) =>{
     try{
         const id = req.params.userId
-        const user = await firestore.collection('users').doc(id);
-        const data = await user.get()
-
-        if(!data.exists){
-            res.status(404).send('User not found')
-        }else{
-            //console.log(data.data().wishList);
-            const continueWatching = data.data().continueWatching;
-
-            const send_data=[]
-            let promise = new Promise(function (resolve, reject) {
-                continueWatching.forEach(async show=>{
-                    let data1 = await firestore.collection('films').doc(show).get();
-                    console.log(show);
-                    if(!data1.exists){
-                        data1 = await firestore.collection('series').doc(show).get();
-                    }
-                    //console.log(data1.data());
-                    send_data.push(data1.data());
-                })
-                setTimeout(() => resolve(send_data), 1000)
-            }).then(send_data =>{
-                res.send(send_data);
-            })
-           
+        if(typeof id === 'undefined' || id === ''){
+            res.send(null);
         }
+        if(id !== null && id !== undefined){
+            const user = await firestore.collection('users').doc(id);
+            const data = await user.get()
 
+            if(!data.exists){
+                res.status(404).send('User not found')
+            }else{
+                //console.log(data.data().wishList);
+                const continueWatching = data.data().continueWatching;
+
+                const send_data=[]
+                let promise = new Promise(function (resolve, reject) {
+                    continueWatching.forEach(async show=>{
+                        try{
+                            let data1 = await firestore.collection('films').doc(show).get();
+                            console.log(show);
+                            if(!data1.exists){
+                                data1 = await firestore.collection('series').doc(show).get();
+                            }
+                            //console.log(data1.data());
+                            send_data.push(data1.data());
+                        }catch(error){
+                            console.log(error);
+                        }
+                    })
+                    setTimeout(() => resolve(send_data), 1000)
+                }).then(send_data =>{
+                    res.send(send_data);
+                })
+            
+            }
+        }
 
     }catch(error){
         console.log(error);

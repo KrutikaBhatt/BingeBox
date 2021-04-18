@@ -197,3 +197,24 @@ export const Maturity = styled.div`
   margin-right: 10px;
   font-size: 12px;
 `;
+
+export const AlignSide = styled.div`
+  width : 400px;
+  display : flex;
+
+`;
+
+export const WatchList = styled.div`
+  cursor: pointer;
+  margin-left:10px;
+  color: #fff;
+  outline: none;
+  border: 2px solid white;
+  font-weight: 700;
+  border-radius: .5vw;
+  margin-right: 1rem;
+  font-family:inherit;
+  font-size:17px;
+  padding: .7rem 2rem;
+  background-color:rgba(51,51,51,.5);
+`;
