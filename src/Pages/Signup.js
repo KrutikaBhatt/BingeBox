@@ -63,12 +63,12 @@ export default function SignUp(){
 
           <Form.Base onSubmit={handleSignup} method="POST">
             <Form.Input
-              placeholder="First name"
+              placeholder="First Name"
               value={firstName}
               onChange={({ target }) => setFirstName(target.value)}
             />
             <Form.Input
-              placeholder="Email address"
+              placeholder="Email Address"
               value={emailAddress}
               onChange={({ target }) => setEmailAddress(target.value)}
             />
@@ -85,7 +85,7 @@ export default function SignUp(){
           </Form.Base>
 
           <Form.Text>
-            Already a user? <Form.Link to="/login"> Log in now.</Form.Link>
+            Already a user? <Form.Link to="/login"> Log in Now.</Form.Link>
           </Form.Text>
           <Form.TextSmall>
             This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.

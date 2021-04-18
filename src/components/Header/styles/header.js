@@ -44,7 +44,7 @@ export const Logo = styled.img`
 export const ButtonLink = styled(ReactLink)`
     display : block;
     background-color: #1A74E2;
-    width :100px;
+    width :106px;
     height :55px;
     color:white;
     border :0;
@@ -74,6 +74,8 @@ export const Feature = styled(Container)`
 export const Text = styled.p`
   color: white;
   font-size: 22px;
+  font-weight: 200;
+  font-family: sans-sherif;
   line-height: normal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
 `;
@@ -85,18 +87,24 @@ export const FeatureCallOut = styled.h2`
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
+
+  &:hover{
+    color: #1A74E2;
+  }
 `;
 
 
 export const Link = styled.p`
   color: #fff;
   text-decoration: none;
+  font-size: 20px;
   margin-right: 30px;
   font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
   cursor: pointer;
 
   &:hover {
     font-weight: bold;
+    color: #1A74E2;
   }
 
   &:last-of-type {
@@ -115,7 +123,7 @@ export const SearchInput = styled.input`
   color: white;
   border: 1px solid white;
   transition: width 0.5s;
-  height: 30px;
+  height: 35px;
   font-size: 14px;
   border-radius: 4px;
   margin-left: ${({ active }) => (active === true ? '10px' : '0')};
@@ -147,8 +155,8 @@ export const SearchIcon = styled.button`
   background-color: transparent;
   border: 0;
   outline: 0;
-  height: 32px;
-  width: 32px;
+  height: 40px;
+  width: 40px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -156,15 +164,16 @@ export const SearchIcon = styled.button`
 
   img {
     filter: brightness(0) invert(1);
-    width: 16px;
+    width: 18px;
   }
 `;
+
 export const Picture = styled.button`
   background: url(${({ src }) => src});
   background-size: contain;
   border: 0;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   cursor: pointer;
 `;
 

@@ -7,6 +7,10 @@ export const Title = styled.p`
   margin-left: 56px;
   margin-right: 56px;
   margin-top: 0;
+
+  &:hover{
+    color: #1A74E2;
+  }
 `;
 
 export const Container = styled.div`
@@ -39,7 +43,7 @@ export const Group = styled.div`
 `;
 
 export const SubTitle = styled.p`
-  font-size: 12px;
+  font-size: 16px;
   color: #fff;
   font-weight: bold;
   margin-top: 0;
@@ -50,7 +54,8 @@ export const SubTitle = styled.p`
 
 export const Text = styled.p`
   margin-top: 5px;
-  font-size: 10px;
+  font-size: 16px;
+  font-family: sans-sherif;
   color: #fff;
   margin-bottom: 0;
   user-select: none;

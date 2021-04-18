@@ -11,7 +11,6 @@ export default function Login(){
 
     const history = useHistory();
     const { firebase } = useContext(FirebaseContext);
-
     const [emailId,setEmail] = useState('');
     const [password,setPassword] = useState('');
     const [error,setError] = useState('');
@@ -45,7 +44,7 @@ export default function Login(){
         console.log(emailAddress);
         setError("Password reset link sent to your email Address");
         auth.sendPasswordResetEmail(emailAddress).then(function() {
-            
+
         }).catch(function(error) {
             console.log(error.message);
         });
@@ -56,20 +55,20 @@ export default function Login(){
     <HeaderContainer>
         <Login_Form>
             <Login_Form.Title>
-                Log In
+                Sign In
             </Login_Form.Title>
             {error && <Login_Form.Error>{error}</Login_Form.Error>}
 
             <Login_Form.Base onSubmit={handleLogin} method ="POST">
 
                 <Login_Form.Input placeholder = "Email Address" value ={emailId} onChange={({target}) => setEmail(target.value)} />
-                <Login_Form.Input placeholder = "Enter Password here " value ={password} onChange={({target}) => setPassword(target.value)} />
+                <Login_Form.Input placeholder = "Password"  type = "password" value ={password} onChange={({target}) => setPassword(target.value)} />
                 <Login_Form.Submit disabled ={isInvalid} type = "submit">
-                    Log In
+                    Sign In
                 </Login_Form.Submit>
                 
             </Login_Form.Base>
-            <center><Login_Form.resetPassword ><p onClick ={forgetPassword} style={{color: "white"}}>Forgot Password</p></Login_Form.resetPassword></center>
+            <center><Login_Form.resetPassword ><p onClick ={forgetPassword} style={{color: "white"}}>Forgot password</p></Login_Form.resetPassword></center>
             <Login_Form.Text> New to Binge Box? <Login_Form.Link to="/signup">Sign up now!</Login_Form.Link>
             </Login_Form.Text>
 

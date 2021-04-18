@@ -27,12 +27,14 @@
     "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
+
   "browserslist": {
     "production": [
       ">0.2%",
@@ -45,6 +47,7 @@
       "last 1 safari version"
     ]
   },
+  
   "jest": {
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.js",

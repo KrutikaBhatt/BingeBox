@@ -18,12 +18,7 @@ export default function  selectionFilter({series,films,India}){
             {
                 title:'Crime',
                 data: series.filter((item)=>item.genre == 'crime'),
-            },
-            {
-                title:'Feel Good',
-                data: series.filter((item)=>item.genre == 'feel-good'),
             }
-
         ],
 
         films: [
@@ -47,6 +42,10 @@ export default function  selectionFilter({series,films,India}){
                 title: 'Romance', 
                 data: films?.filter((item) => item.genre === 'romance') 
             },
+            {
+                title:'Feel Good',
+                data: films?.filter((item)=>item.genre == 'feel-good'),
+            }
           ],
 
         India :[
