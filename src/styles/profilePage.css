@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+.form_class{
+  height:900px;
+  display:flex;
+  width:1500px;
+  margin:auto;
+  justify-content: center; 
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 30px;
+}
+.Incenter{
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 50px;
+    width:900px;
+    padding: 30px;
+    border-radius: 30px;
+    background-color: rgba(59, 58, 58, 0.753);
+    box-shadow: rgba(232, 235, 238, 0.527) 0px 2px 4px 0px, rgba(218, 221, 223, 0.822) 0px 2px 16px 0px;
+}
+.Incenter h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size :35px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+.drag_area{
+  border: 2px solid rgb(242, 241, 247);
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(250, 251, 252);
+  background-size: contain;
+  text-align:center;
+  margin: 30px auto;
+}
+.drag_area.active{
+  border: 2px solid rgb(5, 5, 5);
+}
+.drag_area .icon{
+  font-size: 100px;
+  color: rgb(8, 7, 7);
+  font-family: "Poppins", sans-serif;
+}
+.drag_area header{
+
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(12, 11, 11);
+  padding-left: 20px;
+  padding-right:20px;
+  font-family: "Poppins", sans-serif;
+}
+.drag_area span{
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(5, 5, 5);
+  margin: 10px 0 15px 0;
+  font-family: "Poppins", sans-serif;
+}
+.buttonClass{
+    display:flex;
+    justify-content: center;
+    margin-top:30px;
+    margin-bottom:50px;
+}
+.ShowImageName{
+  display:flex;
+  justify-content: center;
+  margin-top:30px;
+
+}
+.push_area {
+    padding: 10px 25px;
+    font-size: 17px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #17aefd;
+    color: #e9eaf3;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+.MoveToRight{
+  display:flex;
+  /* justify-content:flex-end; */
+  margin-top:30px;
+  margin-bottom:80px;
+  margin-right: 50px;
+  float: right;
+}
+.MoveToLeft{
+  display:flex;
+  /* justify-content:flex-start; */
+  margin-top:30px;
+  margin-bottom:80px;
+  margin-left: 50px;
+  float:left;
+}
+
+.Continue{
+  padding: 10px 25px;
+  font-size: 21px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #17aefd;
+  color: #e9eaf3;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.drag_area img{
+  height: 100%;
+  width: 100%;
+  padding:2px 2px 2px 2px ;
+  object-fit:cover;
+  font-family: "Poppins", sans-serif;
+}
+
+.formInput{
+  margin-top: 30px;
+  font-family: "Poppins", sans-serif;
+  font-size :21px;
+  display:flex;
+}
+
+.formInput h2{
+    padding-top: 14px;
+    font-family:  sans-serif;
+    font-size: 30px;
+    height:30px;
+    margin-left: 40px;
+
+}
+.formInput input{
+  /* margin-top: 15px; */
+  /* margin-left: 10px; */
+  margin: 5px auto;
+  font-family: "Poppins", sans-serif;
+  width : 100%;
+  height:40px;
+  border-radius:15px;
+  border: 2px solid rgb(175, 185, 189);
+  padding: 3px 3px 0px 3px;
+}
+
+.formInput textarea{
+  margin: 5px auto;
+  /* margin-top: 15px;
+  margin-left: 25px; */
+  font-size:21px;
+  font-family: "Poppins", sans-serif;
+  width : 100%;
+  height:140px;
+  font-weight:400;
+  padding: 3px 3px 0px 3px;
+  border-radius:15px;
+  border: 2px solid rgb(175, 185, 189);
+}
+.formInput input[type="text"]{
+  font-family: "Poppins", sans-serif;
+  font-size:21px;
+  font-weight:400;
+  padding-right: 2px;
+}
+.formInput input:focus{
+  outline:none;
+  border: 2px solid rgb(7, 7, 7);
+}
+.formChildren{
+  /* display: block;
+   align-items: ;
+  justify-content: left;
+  padding: 0 13%;
+  margin-top: 20px; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: sans-serif;
+  color:black;
+  font-size:24px;
+  font-weight:400px;
+  background-color:aliceblue;
+  background-size: contain;
+  text-align:center;
+  margin: 30px;
+  height:40px;
+  width:600px;
+  border-radius:15px;
+  border: 3px solid rgb(175, 185, 189);
+  
+}
+
+.file_field .file {
+  width: 100%;
+  height: 100%;
+  background: none;
+  outline: none;
+  border: none;
+  display: none;
+}
