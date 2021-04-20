@@ -2,9 +2,10 @@ import React, { useContext ,useState,useEffect} from 'react';
 import {FirebaseContext} from '../context/firebase';
 import * as ROUTES from '../Routes_System/routes';
 import axios from 'axios';
-import {Loading} from '../components';
+import {Card} from '../components';
 import { SelectProfileContainer } from '../Container/profiles';
 import '../styles/mylist.css';
+import '../styles/Row.css'
 export default function MyList(){
 
     const {firebase} =useContext(FirebaseContext);
@@ -33,7 +34,18 @@ export default function MyList(){
         </div>
         {content.length ===0 ?(<h2>No List</h2>):(
             <>
-            <h2>Here your List</h2>
+            <div className ="row">
+            <Card.Title>Your WatchList</Card.Title>
+                <div className ="row_posters_frame">
+                {content.map((movie) => (
+                    <img 
+                    key={movie.id}
+                    className="row_poster" 
+                    src={`/images/series/${movie.genre}/${movie.slug}/small.jpg`} 
+                    alt={movie.title}></img>
+                ))}
+                </div>
+            </div>
             </>
         )}
         </>
