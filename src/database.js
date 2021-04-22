@@ -769,64 +769,164 @@ export function sendDatabase(firebase) {
     //   slug: 'good-will-hunting',
     // });
 
-    firebase.firestore().collection('films').add({
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'The Devil All the Time',
+    //   description:
+    //     'In Knockemstiff, Ohio and its neighboring backwoods, sinister characters converge around young Arvin Russell as he fights the evil forces that threaten him and his family.',
+    //   genre: 'drama',
+    //   maturity: '18',
+    //   slug: 'the-devil-all-the-time',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Fractured',
+    //   description:
+    //     'Driving cross-country, Ray and his wife and daughter stop at a highway rest area where his daughter falls and breaks her arm. After a frantic rush to the hospital and a clash with the check-in nurse, Ray is finally able to get her to a doctor. While the wife and daughter go downstairs for an MRI, Ray, exhausted, passes out in a chair in the lobby. Upon waking up, they have no record or knowledge of Ray\'s family ever being checked in.',
+    //   genre: 'thriller',
+    //   maturity: '16',
+    //   slug: 'fractured',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Wine Country',
+    //   description:
+    //     'A group of friends head to the land of oaky Chardonnays and big, bold Cabernet Sauvignons for one member of the squad’s 50th birthday party.',
+    //   genre: 'feel-good',
+    //   maturity: '16',
+    //   slug: 'wine-country',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Klaus',
+    //   description:
+    //     'When Jesper distinguishes himself as the Postal Academy\'s worst student, he is sent to Smeerensburg, a small village located on an icy island above the Arctic Circle, where grumpy inhabitants barely exchange words, let alone letters. Jesper is about to give up and abandon his duty as a postman when he meets local teacher Alva and Klaus, a mysterious carpenter who lives alone in a cabin full of handmade toys.',
+    //   genre: 'children',
+    //   maturity: '12',
+    //   slug: 'klaus',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Extraction',
+    //   description:
+    //     'Tyler Rake, a fearless mercenary who offers his services on the black market, embarks on a dangerous mission when he is hired to rescue the kidnapped son of a Mumbai crime lord.',
+    //   genre: 'suspense',
+    //   maturity: '15',
+    //   slug: 'extraction',
+    // });
+
+    // firebase.firestore().collection('films').add({
+    //   id: getUUID(),
+    //   title: 'Five Feet Apart',
+    //   description:
+    //     'Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control — all of which get put to the test when she meets Will, an impossibly charming teen who has the same illness.',
+    //   genre: 'romance',
+    //   maturity: '16',
+    //   slug: 'five-feet-apart',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Gabbar Is Back',
+    //   description:
+    //     'A vigilante network taking out corrupt officials draws the notice of the authorities.',
+    //   genre: 'action',
+    //   maturity: '16',
+    //   slug: 'gabbar-is-back',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Singham Returns',
+    //   description:
+    //     'Singham Returns is an Indian action film directed by Rohit Shetty and produced by Reliance Entertainment. The sequel to the 2011 film Singham, actor Ajay Devgn reprises his role from the previous film, as well as co-producing the project, while Kareena Kapoor Khan plays the female lead.',
+    //   genre: 'action',
+    //   maturity: '15',
+    //   slug: 'singham-returns',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Singham',
+    //   description:
+    //     'An honest, small town cop is transferred to a big city that is controlled by a crime boss that he had once humiliated.',
+    //   genre: 'action',
+    //   maturity: '15',
+    //   slug: 'singham',
+    // });
+    
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Talaash',
+    //   description:
+    //     'A cop, investigating the mysterious death of a filmstar, meets a sex-worker, while he faces some personal problems psychologically. The mystery connects these people in a way, that ultimately changes their lives.',
+    //   genre: 'thriller',
+    //   maturity: '14',
+    //   slug: 'talaash',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Wazir',
+    //   description:
+    //     'Wazir is a tale of two unlikely friends, a wheelchair-bound chess grandmaster and a brave ATS officer. Brought together by grief and a strange twist of fate, the two men decide to help each other win the biggest games of their lives. But there\'s a mysterious, dangerous opponent lurking in the shadows, who is all set to checkmate them.',
+    //   genre: 'thriller',
+    //   maturity: '15',
+    //   slug: 'wazir',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Raat Akeli Hai',
+    //   description:
+    //     'When a newly married landlord is murdered, a misfit cop’s investigation is complicated by the victim’s secretive family and his own conflicted heart.',
+    //   genre: 'crime',
+    //   maturity: '15',
+    //   slug: 'raat-akeli-hai',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Gangs of Wasseypur - Part 1',
+    //   description:
+    //     'Shahid Khan is exiled after impersonating the legendary Sultana Daku in order to rob British trains. Now outcast, Shahid becomes a worker at Ramadhir Singh\'s colliery, only to spur a revenge battle that passes on to generations.',
+    //   genre: 'crime',
+    //   maturity: '18',
+    //   slug: 'gangs-of-wasseypur-part-1',
+    // });
+
+    // firebase.firestore().collection('India').add({
+    //   id: getUUID(),
+    //   title: 'Gangs of Wasseypur - Part 2',
+    //   description:
+    //     'It’s the sequel and the final chapter in the bloody lives of the avenging ‘Gangs of Wasseypur’. Sardar Khan’s sons are at war with Ramadhir Singh’s men; and the knives clash and the bullets flash; till either drops dead.',
+    //   genre: 'crime',
+    //   maturity: '18',
+    //   slug: 'gangs-of-wasseypur-part-2',
+    // });
+
+    firebase.firestore().collection('India').add({
       id: getUUID(),
-      title: 'The Devil All the Time',
+      title: 'Dil Dhadakne Do',
       description:
-        'In Knockemstiff, Ohio and its neighboring backwoods, sinister characters converge around young Arvin Russell as he fights the evil forces that threaten him and his family.',
+        'On a cruise to celebrate their parents\' 30th wedding anniversary, a brother and sister deal with the impact of family considerations on their romantic lives.',
       genre: 'drama',
-      maturity: '18',
-      slug: 'the-devil-all-the-time',
+      maturity: '14',
+      slug: 'dil-dhadakne-do',
     });
 
-    firebase.firestore().collection('films').add({
+    firebase.firestore().collection('India').add({
       id: getUUID(),
-      title: 'Fractured',
+      title: 'Udaan',
       description:
-        'Driving cross-country, Ray and his wife and daughter stop at a highway rest area where his daughter falls and breaks her arm. After a frantic rush to the hospital and a clash with the check-in nurse, Ray is finally able to get her to a doctor. While the wife and daughter go downstairs for an MRI, Ray, exhausted, passes out in a chair in the lobby. Upon waking up, they have no record or knowledge of Ray\'s family ever being checked in.',
-      genre: 'thriller',
-      maturity: '16',
-      slug: 'fractured',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Wine Country',
-      description:
-        'A group of friends head to the land of oaky Chardonnays and big, bold Cabernet Sauvignons for one member of the squad’s 50th birthday party.',
-      genre: 'feel-good',
-      maturity: '16',
-      slug: 'wine-country',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Klaus',
-      description:
-        'When Jesper distinguishes himself as the Postal Academy\'s worst student, he is sent to Smeerensburg, a small village located on an icy island above the Arctic Circle, where grumpy inhabitants barely exchange words, let alone letters. Jesper is about to give up and abandon his duty as a postman when he meets local teacher Alva and Klaus, a mysterious carpenter who lives alone in a cabin full of handmade toys.',
-      genre: 'children',
-      maturity: '12',
-      slug: 'klaus',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Extraction',
-      description:
-        'Tyler Rake, a fearless mercenary who offers his services on the black market, embarks on a dangerous mission when he is hired to rescue the kidnapped son of a Mumbai crime lord.',
-      genre: 'suspense',
-      maturity: '15',
-      slug: 'extraction',
-    });
-
-    firebase.firestore().collection('films').add({
-      id: getUUID(),
-      title: 'Five Feet Apart',
-      description:
-        'Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control — all of which get put to the test when she meets Will, an impossibly charming teen who has the same illness.',
-      genre: 'romance',
-      maturity: '16',
-      slug: 'five-feet-apart',
+        'Upon returning to his industrial hometown, a young man must decide whether to follow his own dreams or acquiesce to his father\'s plans for his future.',
+      genre: 'drama',
+      maturity: '14',
+      slug: 'udaan',
     });
   }
   

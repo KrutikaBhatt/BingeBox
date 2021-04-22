@@ -21,7 +21,7 @@ export function BrowseContainer({slides}){
     //const [category, setCategory] = useState('series');
     const [searchTerm, setsearchTerm] = useState('');
     const [slideRows, setSlideRows] = useState([]);
-    console.log(slides);
+    //console.log(slides);
     const [movieId, setmovieId] = useState('')
     const [continueWatch,setContinue] = useState([]);
     const {firebase} =useContext(FirebaseContext);
@@ -59,7 +59,7 @@ export function BrowseContainer({slides}){
         useEffect(()=>{
             
           const api = 'http://localhost:8080/movie/recommend/'+user.uid;
-          //console.log(api);
+          console.log(api);
           axios.get(api).then((res) =>{
               setRecommend(res.data);
               console.log("The recommended stuff :",res.data);
@@ -73,10 +73,10 @@ export function BrowseContainer({slides}){
         useEffect(()=>{
             
             const api = 'http://localhost:8080/movie/showContinueWatching/'+user.uid;
-            //console.log(api);
+            console.log(api);
             axios.get(api).then((res) =>{
                 setcontent(res.data);
-                //console.log(res.data);
+                console.log(res.data);
             })
             .catch((error)=>{
                 console.log("Error occurred due to Continue Watching");
@@ -113,9 +113,6 @@ export function BrowseContainer({slides}){
               <Header.Group>
                 <Header.Picture src ={user.photoURL} onClick={() =>{history.push(ROUTES.profile)}}/>
                 <Header.DropItem onClick={() =>{history.push(ROUTES.profile)}}>{user.displayName}</Header.DropItem>
-              </Header.Group>
-              <Header.Group>
-                <Header.DropItem onClick={() =>{history.push(ROUTES.profile)}}>My Account</Header.DropItem>
               </Header.Group>
               <Header.Group>
                 <Header.DropItem onClick={() =>{history.push(ROUTES.MyList)}}>Watch List</Header.DropItem>
