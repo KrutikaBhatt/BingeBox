@@ -222,4 +222,9 @@ export const WatchList = styled.div`
   font-size:17px;
   padding: .7rem 2rem;
   background-color:rgba(51,51,51,.5);
+
+  &:hover {
+    background-color:white;
+    color:black;
+  }
 `;

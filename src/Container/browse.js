@@ -21,7 +21,7 @@ export function BrowseContainer({slides}){
     //const [category, setCategory] = useState('series');
     const [searchTerm, setsearchTerm] = useState('');
     const [slideRows, setSlideRows] = useState([]);
-    //console.log(slides);
+    console.log(slides);
     const [movieId, setmovieId] = useState('')
     const [continueWatch,setContinue] = useState([]);
     const {firebase} =useContext(FirebaseContext);
@@ -91,7 +91,7 @@ export function BrowseContainer({slides}){
       loading ?(
         <Loading src ={user.photoURL}  />
       ) :<Loading.ReleaseBody />}
-      <Header src="joker1" dontShowOnSmallViewPort>
+      <Header src="killed_sara" dontShowOnSmallViewPort>
       <Header.Frame>
         <Header.Group>
                 <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Binge Box" />
@@ -131,17 +131,18 @@ export function BrowseContainer({slides}){
         </Header.Group>
       </Header.Frame>
       <Header.Feature>
-        <Header.Callout>Watch Joker Now</Header.Callout>
+        <Header.Callout>Who Killed Sara?</Header.Callout>
         <Header.Text>
-          Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
+          {/* Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham
           City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a
-          futile attempt to feel like he's part of the world around him.
+          futile attempt to feel like he's part of the world around him. */}
+          Hell-bent on exacting revenge and proving he was framed <br />for his sister's murder, Álex sets out to unearth<br /> much more than the crime's real culprit.
         </Header.Text>
         {/* <Header.PlayButton>Play</Header.PlayButton>  */}
         <Card.AlignSide>
         <Player>
           <Player.Button />
-          <Player.Video src="/videos/joker.mp4" />
+          <Player.Video src="/videos/Killed_sara.mp4" />
         </Player>
 
         <Card.WatchList>My List</Card.WatchList>
@@ -161,19 +162,19 @@ export function BrowseContainer({slides}){
           ))}
         </div>
         </div>
-        <div className ="row">
+      <div className ="row">
       <Card.Title>Continue Watching</Card.Title>
-        <div className ="row_posters_frame">
+        <div className ="Continue">
           {content.map((movie) => (
             <img 
             key={movie.id}
-            className="row_poster" 
+            className="row_continue" 
             src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
             alt={movie.title}></img>
           ))}
         </div>
-     </div>
-     
+        </div>
+      
       <Card.Group>
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>

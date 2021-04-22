@@ -1,24 +1,52 @@
 .row_posters_frame{
     display:flex;
     overflow-x: scroll;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     padding-left: 10px;
-
+    margin-bottom: 30px;
 }
 
 .row_posters_frame::-webkit-scrollbar{
-    display:none;
+    display: none;
 }
 .row_poster{
     object-fit: contain;
     width:300px;
-    max-height: 400px;
-    transition: transform 450ms;
-    /* margin-right:10px; */
-    margin-bottom: 110px;
+    max-height: 380px;
+    transition: transform 200ms;
+    margin-right:14px;
+    margin-bottom: 8px;
+    
 }
 
 .row_poster:hover{
+    transform: scale(1.08);
+    opacity: 1;
+
+}
+
+.Continue{
+    display:flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    /* padding-left: 10px; */
+    margin-bottom: 80px;
+}
+.Continue::-webkit-scrollbar{
+    display:none
+}
+.row_continue{
+    object-fit: contain;
+    width:auto;
+    max-height: 380px;
+    transition: transform 200ms;
+    margin-right:18px;
+    margin-left: -5px;
+    margin-bottom: 8px;
+    
+}
+
+.row_continue:hover{
     transform: scale(1.08);
     opacity: 1;
 

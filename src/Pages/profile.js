@@ -18,7 +18,7 @@ export default function Profile(){
         const api = 'http://localhost:8080/api/getUser/'+user.uid;
         console.log(api);
         axios.get(api).then((res) =>{
-            setcontent(res.data);
+            setcontent(res);
             //console.log(res.data);
         })
         .catch((error)=>{

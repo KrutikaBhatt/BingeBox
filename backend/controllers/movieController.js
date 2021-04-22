@@ -27,11 +27,32 @@ const showWishList = async(req,res,next) =>{
                         data1 = await firestore.collection('series').doc(show).get();
                     }
                     //console.log(data1.data());
-                    send_data.push(data1.data());
+                   const FA={
+                       ...data1.data(),
+                       docId:show,
+                   }
+                    send_data.push(FA);
                 })
                 setTimeout(() => resolve(send_data), 1000)
             }).then(send_data =>{
-                res.send(send_data);
+                const Array1 = []
+                const Final_array = {
+                    "series":[{
+                        title:'Your Watch List',
+                        data :[...send_data],
+                    },
+                ]
+                }
+                Array1.push(Final_array);
+                Array1.map((item) =>{
+                    console.log("Slide Item title :",item.series);
+                    item.series.map((slide) =>{
+                        console.log(slide.title);
+                    })
+                    console.log("Data :",item.data);
+                })
+                
+                res.send(Array1);
             })
            
         }
@@ -67,13 +88,18 @@ const showContinueWatching = async(req,res,next) =>{
                                 data1 = await firestore.collection('series').doc(show).get();
                             }
                             //console.log(data1.data());
-                            send_data.push(data1.data());
+                            const FA={
+                                ...data1.data(),
+                                docId:show,
+                            }
+                            send_data.push(FA);
                         }catch(error){
                             console.log(error);
                         }
                     })
                     setTimeout(() => resolve(send_data), 1000)
                 }).then(send_data =>{
+                   
                     res.send(send_data);
                 })
             
