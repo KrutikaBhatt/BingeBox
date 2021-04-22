@@ -149,7 +149,7 @@ export function BrowseContainer({slides}){
 
       <div className ="row">
       <Card.Title>Recommended for you</Card.Title>
-        <div className ="row_posters_frame">
+        <div className ="Continue">
           {recommend.map((movie) => (
             <img 
             key={movie.id}
@@ -160,6 +160,7 @@ export function BrowseContainer({slides}){
         </div>
         </div>
       <div className ="row">
+
       <Card.Title>Continue Watching</Card.Title>
         <div className ="Continue">
           {content.map((movie) => (
@@ -170,6 +171,7 @@ export function BrowseContainer({slides}){
             alt={movie.title}></img>
           ))}
         </div>
+        <br></br><br></br><br></br><br></br><br></br>
         </div>
       
       <Card.Group>

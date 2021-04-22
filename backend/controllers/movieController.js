@@ -189,10 +189,8 @@ const recommendMovie = async(req,res,next) =>{
                                 
                             }else{
                                 ShowData.forEach(doc =>{
-                                    if(!continueWatching.includes(doc.id)){
+                                    if(!(continueWatching.includes(doc.id) && final_Id.includes(doc.id)))
                                         final_Id.push(doc.data());
-                                        
-                                    }
                                 })
                             }
                         } )
