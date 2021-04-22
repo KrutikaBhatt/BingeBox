@@ -191,7 +191,6 @@ const recommendMovie = async(req,res,next) =>{
                                 ShowData.forEach(doc =>{
                                     if(continueWatching.includes(doc.id) || final_Id.includes(doc.data()) || final_Id.includes(doc.uid)){
                                         console.log("Similar ID");
-
                                     }
                                     else{
                                         

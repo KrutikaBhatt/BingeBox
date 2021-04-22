@@ -6,7 +6,7 @@ export const Background = styled.div`
   flex-direction: column;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35)), url(${({ src }) => (src ? `../images/misc/${src}.jpg` : '../images/misc/newbg.jpg')}) top left / cover
     no-repeat;
-
+  margin-bottom: 30px;
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) => dontShowOnSmallViewPort && `background: none;`}
   }

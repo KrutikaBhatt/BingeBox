@@ -30,11 +30,14 @@
     overflow-x: scroll;
     overflow-y: hidden;
     /* padding-left: 10px; */
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    margin-left: 55px;
 }
+
 .Continue::-webkit-scrollbar{
     display:none
 }
+
 .row_continue{
     object-fit: contain;
     width:auto;
@@ -43,7 +46,6 @@
     margin-right:18px;
     margin-left: -5px;
     margin-bottom: 8px;
-    
 }
 
 .row_continue:hover{
