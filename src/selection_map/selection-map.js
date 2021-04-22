@@ -63,10 +63,6 @@ export default function  selectionFilter({series,films,India}){
                 data : India?.filter((item) =>item.genre == 'action')
             },
             {
-                title :'Romance',
-                data :India?.filter((item) =>item.genre =='romance')
-            },
-            {
                 title :'Thriller',
                 data :India?.filter((item) =>item.genre =='thriller')
             },

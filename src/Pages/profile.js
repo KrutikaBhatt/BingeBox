@@ -51,26 +51,26 @@ export default function Profile(){
                 <div className="drag_area"><img src={`/images/users/${user.photoURL}.png`} alt ="Your Icon"/></div>
 
                 <div className="formInput">
-                    <h2>Name :</h2>
+                    <h2>Name :&nbsp;&nbsp;</h2>
                     <div className ="formChildren">
                         {user.displayName}
                     </div>
                 </div>
                 <div className="formInput">
-                    <h2>Email :</h2>
+                    <h2>Email :&nbsp;&nbsp;</h2>
                     <div className ="formChildren">
                         {content.emailId}
                     </div>
                 </div>
                 <div className="formInput">
-                    <h2>Plan :&nbsp;&nbsp; </h2>
+                    <h2>Plan :&nbsp;&nbsp;&nbsp;&nbsp;</h2>
                     <div className ="formChildren">
                         {content.plan}
                     </div>
                 </div>
-                <div className="formInput">
+                <div className="validity">
                     <h2>Validity :</h2>
-                    <div className ="validity">
+                    <div className ="formChildren">
                         {content.valid_till}
                     </div>
                 </div>

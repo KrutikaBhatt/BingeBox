@@ -2,25 +2,27 @@
 
 
 .form_class{
-  height:900px;
+  height:700px;
   display:flex;
-  width:1500px;
+  width:1000px;
   margin:auto;
   justify-content: center; 
   border-radius: 8px;
   font-family: "Poppins", sans-serif;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
+
 .Incenter{
     /* display: flex; */
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 25px;
     width:900px;
-    padding: 30px;
+    padding: 10px;
     border-radius: 30px;
     background-color: rgba(59, 58, 58, 0.753);
     box-shadow: rgba(232, 235, 238, 0.527) 0px 2px 4px 0px, rgba(218, 221, 223, 0.822) 0px 2px 16px 0px;
 }
+
 .Incenter h2{
   display: flex;
   align-items: center;
@@ -30,10 +32,11 @@
   font-family: "Poppins", sans-serif;
   color: white;
 }
+
 .drag_area{
   border: 2px solid rgb(242, 241, 247);
-  height: 200px;
-  width: 200px;
+  height: 120px;
+  width: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +45,7 @@
   background-color: rgb(250, 251, 252);
   background-size: contain;
   text-align:center;
-  margin: 30px auto;
+  margin: 0px auto;
 }
 
 .drag_area img{
@@ -56,18 +59,35 @@
 .formInput{
   margin-top: 10px;
   font-family: "Poppins", sans-serif;
-  font-size :21px;
+  font-size :20px;
   display:flex;
+  margin-left: 50px;
 }
 
 .formInput h2{
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     font-family:  sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     height:30px;
-    margin-left: 40px;
-
+    margin-left: 30px;
 }
+
+.validity{
+  margin-top: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size :20px;
+  display:flex;
+  margin-left: 50px;
+}
+
+.validity h2{
+  padding-bottom: 5px;
+  font-family:  sans-serif;
+  font-size: 20px;
+  height:30px;
+  margin-left: 25px;
+}
+
 .formInput input{
   /* margin-top: 15px; */
   /* margin-left: 10px; */
@@ -84,7 +104,7 @@
   margin: 5px auto;
   /* margin-top: 15px;
   margin-left: 25px; */
-  font-size:21px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
   width : 100%;
   height:140px;
@@ -93,16 +113,19 @@
   border-radius:15px;
   border: 2px solid rgb(175, 185, 189);
 }
+
 .formInput input[type="text"]{
   font-family: "Poppins", sans-serif;
-  font-size:21px;
+  font-size:20px;
   font-weight:400;
   padding-right: 2px;
 }
+
 .formInput input:focus{
   outline:none;
   border: 2px solid rgb(7, 7, 7);
 }
+
 .formChildren{
   /* display: block;
    align-items: ;
@@ -117,38 +140,18 @@
   padding-left: 18px;
   font-family: sans-serif;
   color:black;
-  font-size:24px;
+  font-size:20px;
   font-weight:400px;
   background-color:aliceblue;
   background-size: contain;
   text-align:center;
-  margin: 15px;
+  margin: auto 15px;
   height:40px;
   width:600px;
   border-radius:15px;
   border: 3px solid rgb(175, 185, 189);
-  
 }
-.validity{
-  
-  display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  /* flex-direction: column; */
-  padding-left: 18px;
-  font-family: sans-serif;
-  color:black;
-  font-size:24px;
-  font-weight:400px;
-  background-color:aliceblue;
-  background-size: contain;
-  text-align:center;
-  margin: 15px;
-  height:40px;
-  width:580px;
-  border-radius:15px;
-  border: 3px solid rgb(175, 185, 189);
-}
+
 .profileButton{
   cursor: pointer;
   margin-left: 10px;
@@ -163,6 +166,13 @@
   padding: .7rem 2rem;
   background-color: rgba(51,51,51,.5);
 }
+
+.profileButton:hover{
+  background-color: white;
+  color: black;
+  border: 4px solid black;
+}
+
 .button_class{
   display: flex;
   align-items: center;
@@ -172,3 +182,4 @@
   text-align:center;
   margin: 30px auto;
 }
+

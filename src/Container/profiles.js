@@ -9,7 +9,7 @@ export function SelectProfileContainer({user,setProfile}){
         <>
         <Header bg ={false}>
             <Header.Frame>
-                <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Bing Box" />
+                <Header.Logo imageLink={ROUTES.HOME} src={logo} alt="Binge Box" />
             </Header.Frame>
         </Header>
         <Profiles>

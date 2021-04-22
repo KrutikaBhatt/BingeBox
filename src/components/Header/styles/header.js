@@ -84,13 +84,9 @@ export const FeatureCallOut = styled.h2`
   color: white;
   font-size: 50px;
   line-height: normal;
-  font-weight: bold;
+  font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   margin: 0;
-
-  &:hover{
-    color: #1A74E2;
-  }
 `;
 
 
