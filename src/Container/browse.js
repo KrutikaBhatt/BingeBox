@@ -115,9 +115,6 @@ export function BrowseContainer({slides}){
                 <Header.DropItem onClick={() =>{history.push(ROUTES.profile)}}>{user.displayName}</Header.DropItem>
               </Header.Group>
               <Header.Group>
-                <Header.DropItem onClick={() =>{history.push(ROUTES.profile)}}>My Account</Header.DropItem>
-              </Header.Group>
-              <Header.Group>
                 <Header.DropItem onClick={() =>{history.push(ROUTES.MyList)}}>Watch List</Header.DropItem>
               </Header.Group>
               <Header.Group>
