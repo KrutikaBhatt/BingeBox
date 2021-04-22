@@ -185,13 +185,18 @@ const recommendMovie = async(req,res,next) =>{
                             const ShowData = await firestore.collection('films').where('genre','==',item).where('tags', 'array-contains', tag).get();
                             
                             if(ShowData.empty){
-                                //console.log("Pata nahi .. Kuch nahi aa raha");
+                                console.log("Pata nahi .. Kuch nahi aa raha");
                                 
                             }else{
                                 ShowData.forEach(doc =>{
-                                    if(!continueWatching.includes(doc.id)){
-                                        final_Id.push(doc.data());
+                                    if(continueWatching.includes(doc.id) || final_Id.includes(doc.data()) || final_Id.includes(doc.uid)){
+                                        console.log("Similar ID");
+
+                                    }
+                                    else{
                                         
+                                        final_Id.push(doc.data());
+
                                     }
                                 })
                             }
@@ -200,8 +205,15 @@ const recommendMovie = async(req,res,next) =>{
                     })
                     setTimeout(() => resolve(final_Id), 1000);
                 }).then(final_Id =>{
-                    
-                   res.send(final_Id);
+                    let check = {};
+                    let result = [];
+                    for(let i=0; i<final_Id.length; i++) {
+                        if(!check[final_Id[i].id]){
+                            check[final_Id[i].id] = true;
+                            result.push(final_Id[i]);
+                        }
+                    }
+                   res.send(result);
                 }
                 )
             })
