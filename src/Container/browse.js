@@ -159,6 +159,7 @@ export function BrowseContainer({slides}){
           ))}
         </div>
         </div>
+      {content.length !==0}
       <div className ="row">
 
       <Card.Title>Continue Watching</Card.Title>
