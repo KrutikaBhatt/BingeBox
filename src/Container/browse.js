@@ -56,33 +56,47 @@ export function BrowseContainer({slides}){
     
         },[searchTerm]);
 
-        useEffect(()=>{
-            
-          const api = 'http://localhost:8080/movie/recommend/'+user.uid;
-          console.log(api);
-          axios.get(api).then((res) =>{
-              setRecommend(res.data);
-              console.log("The recommended stuff :",res.data);
-          })
-          .catch((error)=>{
-              console.log("Error occurred due to Recommendation ");
-              console.log(error.message);
-          });
-      },[user.uid]);
+        const getReccomendationPosts = async () =>{
+          try{
+            const userPosts = await axios.get('http://localhost:8080/movie/recommend/'+user.uid)
+            setRecommend(userPosts.data); 
+          }catch(error){
+            console.log("The error is main Reccomendation function");
+          }
+        }
 
         useEffect(()=>{
-            
-            const api = 'http://localhost:8080/movie/showContinueWatching/'+user.uid;
-            console.log(api);
-            axios.get(api).then((res) =>{
-                setcontent(res.data);
-                console.log(res.data);
-            })
-            .catch((error)=>{
-                console.log("Error occurred due to Continue Watching");
-                console.log(error.message);
-            });
-        },[user.uid]);
+    
+          getReccomendationPosts()
+          const interval=setInterval(()=>{
+            getReccomendationPosts()
+           },10000)
+             
+             
+           return()=>clearInterval(interval)
+      },[])
+
+      const getContinueWatchingPosts = async () =>{
+        try{
+          const userPosts = await axios.get('http://localhost:8080/movie/showContinueWatching/'+user.uid)
+          setcontent(userPosts.data); 
+        }catch(error){
+          console.log("The error is Continue main function");
+        }
+      }
+
+      useEffect(()=>{
+  
+        getContinueWatchingPosts()
+        const interval=setInterval(()=>{
+          getContinueWatchingPosts()
+         },10000)
+           
+           
+         return()=>clearInterval(interval)
+    },[])
+
+
 
     return profile.displayName ?(
       
@@ -190,9 +204,7 @@ export function BrowseContainer({slides}){
             </Card.Entities>
             <Card.Feature category={category}>
               <Card.AlignSide>
-              <Player>
-                <Player.Button />
-                {/* <Player.Button onClick={() =>{
+              <Player onClick={() =>{
                   console.log("Adding to continue Watching");
                   if(movieId === ''){
                     console.log("Its an empty string");
@@ -206,7 +218,8 @@ export function BrowseContainer({slides}){
                       console.log(res);
                     })
                   }
-                }} /> */}
+                }}>
+                <Player.Button/>
                 <Player.Video src="/videos/frozen2.mp4" />
               </Player>
               <Card.WatchList category={category} onClick={() =>{
