@@ -73,7 +73,7 @@ describe('<Card />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('renders the <Movie Card /> with and clicks the card feature', () => {
+  it('renders the <Card /> with and clicks the card feature', () => {
     const { container, queryByText, getByAltText, getByTestId } = render(
       <Card.Group>
         {slideRows.map((slideItem) => (

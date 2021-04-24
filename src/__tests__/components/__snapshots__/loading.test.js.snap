@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> renders the <Loading /> 1`] = `
+<div
+  class="sc-bdfBwQ glRYhw"
+  data-testid="loading"
+>
+  <img
+    class="sc-gsTCUz bobqpP"
+    data-testid="loading-picture"
+    src="/images/users//images/users/3.png.png"
+  />
+</div>
+`;
+
+exports[`<Loading /> renders the <Loading.ReleaseBody /> 1`] = `null`;

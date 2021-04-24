@@ -1,30 +1,30 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { Login_Form } from '../../components';
+import  {Login_Form as Form} from '../../components';
 
 jest.mock('react-router-dom');
 
-describe('<Login_Form />', () => {
-  it('renders the <Login_Form /> with populated data', () => {
+describe('<Form />', () => {
+  it('renders the <Form /> with populated data', () => {
     const { container, getByText, getByPlaceholderText } = render(
-      <Login_Form>
-        <Login_Form.Title>Sign In Now</Login_Form.Title>
+      <Form>
+        <Form.Title>Sign In Now</Form.Title>
 
-        <Login_Form.Base>
-          <Login_Form.Input placeholder="Email address" onChange={() => {}} />
-          <Login_Form.Input type="password" placeholder="Password" onChange={() => {}} />
-          <Login_Form.Submit type="submit" disabled>
+        <Form.Base>
+          <Form.Input placeholder="Email address" onChange={() => {}} />
+          <Form.Input type="password" placeholder="Password" onChange={() => {}} />
+          <Form.Submit type="submit" disabled>
             Sign In
-          </Login_Form.Submit>
-        </Login_Form.Base>
+          </Form.Submit>
+        </Form.Base>
 
-        <Login_Form.Text>
-          New to Binge Box? <Login_Form.Link to="/signup">Sign up now.</Login_Form.Link>
-        </Login_Form.Text>
-        <Login_Form.TextSmall>
+        <Form.Text>
+          New to Netflix? <Form.Link to="/signup">Sign up now.</Form.Link>
+        </Form.Text>
+        <Form.TextSmall>
           This page is protected by Google reCAPTCHA to ensure you're not a bot. Learn more.
-        </Login_Form.TextSmall>
-      </Login_Form>
+        </Form.TextSmall>
+      </Form>
     );
 
     expect(
@@ -38,12 +38,12 @@ describe('<Login_Form />', () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 
-  it('renders the <Login_Form /> with an error', () => {
+  it('renders the <Form /> with an error', () => {
     const { container, getByText, queryByText } = render(
-      <Login_Form>
-        <Login_Form.Error>Your email address is already being used</Login_Form.Error>
-        <Login_Form.Submit type="submit">Sign In</Login_Form.Submit>
-      </Login_Form>
+      <Form>
+        <Form.Error>Your email address is already being used</Form.Error>
+        <Form.Submit type="submit">Sign In</Form.Submit>
+      </Form>
     );
 
     expect(getByText('Your email address is already being used')).toBeTruthy();

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Jumbotron /> renders the <Jumbotron /> with populated data 1`] = `
+<div
+  class="jumbotron__Container-sc-3fj0u3-6 hSTkvz"
+>
+  <div
+    class="jumbotron__Item-sc-3fj0u3-5 cOA-dWb"
+  >
+    <div
+      class="jumbotron__Inner-sc-3fj0u3-0 bBSoZq"
+      direction="row"
+    >
+      <div
+        class="jumbotron__Pane-sc-3fj0u3-1 gOqwSr"
+      >
+        <h1
+          class="jumbotron__Title-sc-3fj0u3-2 hbQNEq"
+        >
+          Enjoy on your TV.
+        </h1>
+        <h2
+          class="jumbotron__SubTitle-sc-3fj0u3-3 eoiYvR"
+        >
+          Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.
+        </h2>
+      </div>
+      <div
+        class="jumbotron__Pane-sc-3fj0u3-1 gOqwSr"
+      >
+        <img
+          alt="Tiger King on Binge Box"
+          class="jumbotron__Image-sc-3fj0u3-4 gjqGjt"
+          data-testid="1-jumbo-image"
+          src="/Images/misc/home-tv.jpg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="jumbotron__Item-sc-3fj0u3-5 cOA-dWb"
+  >
+    <div
+      class="jumbotron__Inner-sc-3fj0u3-0 bBSoZq"
+      direction="row"
+    >
+      <div
+        class="jumbotron__Pane-sc-3fj0u3-1 gOqwSr"
+      >
+        <h1
+          class="jumbotron__Title-sc-3fj0u3-2 hbQNEq"
+        >
+          Download your programmes to watch on the go.
+        </h1>
+        <h2
+          class="jumbotron__SubTitle-sc-3fj0u3-3 eoiYvR"
+        >
+          Save your data and watch all your favourites offline.
+        </h2>
+      </div>
+      <div
+        class="jumbotron__Pane-sc-3fj0u3-1 gOqwSr"
+      >
+        <img
+          alt="Watch on mobile"
+          class="jumbotron__Image-sc-3fj0u3-4 gjqGjt"
+          data-testid="2-jumbo-image"
+          src="/Images/misc/On-mobile.jpg"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    class="jumbotron__Item-sc-3fj0u3-5 cOA-dWb"
+  >
+    <div
+      class="jumbotron__Inner-sc-3fj0u3-0 bBSoZq"
+      direction="row"
+    >
+      <div
+        class="jumbotron__Pane-sc-3fj0u3-1 gOqwSr"
+      >
+        <h1
+          class="jumbotron__Title-sc-3fj0u3-2 hbQNEq"
+        >
+          Watch everywhere.
+        </h1>
+        <h2
+          class="jumbotron__SubTitle-sc-3fj0u3-3 eoiYvR"
+        >
+          Stream unlimited films and TV programmes on your phone, tablet, laptop and TV without paying more.
+        </h2>
+      </div>
+      <div
+        class="jumbotron__Pane-sc-3fj0u3-1 gOqwSr"
+      >
+        <img
+          alt="Money Heist on Binge Box"
+          class="jumbotron__Image-sc-3fj0u3-4 gjqGjt"
+          data-testid="3-jumbo-image"
+          src="/Images/misc/home-imac.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -32,11 +32,11 @@ export default function App() {
         <HOME />
     </IsUserRedirect>
 
-    <ProtectedPaymentGateway user={user} path={ROUTES.payment}>
-      <Payment />
-     </ProtectedPaymentGateway>
      </Switch>
 
+     <Route exact path ={ROUTES.payment}>
+        <Payment />
+    </Route>
      <Route exact path ={ROUTES.profile}>
         <Profile />
     </Route>

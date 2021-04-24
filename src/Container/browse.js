@@ -9,7 +9,6 @@ import {FooterContainer} from '../Container/footer';
 import { PlayButton } from '../components/Header/styles/header';
 import axios from 'axios';
 import '../styles/Row.css';
-import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
 import { useHistory } from 'react-router-dom';
 
 export function BrowseContainer({slides}){
