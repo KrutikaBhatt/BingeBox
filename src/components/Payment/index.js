@@ -23,6 +23,7 @@ Payment.Col = function PaymenetCol({children, ...restProps}){
 };
 
 Payment.PriceBox = function Pricebox({children,...restProps}){
+     // eslint-disable-next-line
     return <Price_box {...restProps}>{children}</Price_box>;
 };
 

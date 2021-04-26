@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
     "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
+    "eslint": "^7.25.0",
     "firebase": "^8.2.7",
     "fuse": "^0.4.0",
     "fuse.js": "^6.4.6",
@@ -76,10 +76,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.20.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "gh-pages": "^3.1.0",
-    "prettier": "^2.2.1"
+    "gh-pages": "^3.1.0"
   }
 }

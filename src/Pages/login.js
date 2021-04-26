@@ -5,7 +5,6 @@ import {FooterContainer} from '../Container/footer';
 import {HeaderContainer} from '../Container/login_header';
 import {Login_Form} from '../components';
 import * as ROUTES from '../Routes_System/routes';
-import { isElementOfType } from 'react-dom/test-utils';
 
 export default function Login(){
 
@@ -16,7 +15,7 @@ export default function Login(){
     const [error,setError] = useState('');
 
     const isInvalid = password ==''||emailId == '';
-    //Firebase Work here --
+    // eslint-disable-next-line
     const handleLogin =(event) =>{
         event.preventDefault();
 
@@ -37,7 +36,7 @@ export default function Login(){
 
         var auth = firebase.auth();
         var emailAddress = emailId;
-        if(emailAddress == ''){
+        if(emailAddress === ''){
             setError("Please enter the email Field");
         }
         else{

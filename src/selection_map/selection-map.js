@@ -5,19 +5,19 @@ export default function  selectionFilter({series,films,India}){
         series: [
             {
                 title:'Documentaries',
-                data: series.filter((item)=> item.genre == 'documentaries'),
+                data: series.filter((item)=> item.genre === 'documentaries'),
             },
             {
                 title:'Comedies',
-                data: series.filter((item)=>item.genre == 'comedies'),
+                data: series.filter((item)=>item.genre === 'comedies'),
             },
             {
                 title:'Children',
-                data: series.filter((item)=>item.genre == 'children'),
+                data: series.filter((item)=>item.genre === 'children'),
             },
             {
                 title:'Crime',
-                data: series.filter((item)=>item.genre == 'crime'),
+                data: series.filter((item)=>item.genre === 'crime'),
             }
         ],
 
@@ -44,7 +44,7 @@ export default function  selectionFilter({series,films,India}){
             },
             {
                 title:'Feel Good',
-                data: films?.filter((item)=>item.genre == 'feel-good'),
+                data: films?.filter((item)=>item.genre === 'feel-good'),
             }
           ],
 
@@ -56,19 +56,19 @@ export default function  selectionFilter({series,films,India}){
             },
             {
                 title :'Drama',
-                data :India?.filter((item) =>item.genre == 'drama')
+                data :India?.filter((item) =>item.genre === 'drama')
             },
             {
                 title :'Action',
-                data : India?.filter((item) =>item.genre == 'action')
+                data : India?.filter((item) =>item.genre === 'action')
             },
             {
                 title :'Thriller',
-                data :India?.filter((item) =>item.genre =='thriller')
+                data :India?.filter((item) =>item.genre ==='thriller')
             },
             {
                 title :'Crime',
-                data :India?.filter((item) =>item.genre =='crime')
+                data :India?.filter((item) =>item.genre ==='crime')
             },
         ]
     }

@@ -6,7 +6,6 @@ import {Loading , Header,Card,Player} from '../components';
 import * as ROUTES from '../Routes_System/routes';
 import logo from '../BingeBoxLogo.png';
 import {FooterContainer} from '../Container/footer';
-import { PlayButton } from '../components/Header/styles/header';
 import axios from 'axios';
 import '../styles/Row.css';
 import { useHistory } from 'react-router-dom';
@@ -22,16 +21,11 @@ export function BrowseContainer({slides}){
     const [slideRows, setSlideRows] = useState([]);
     //console.log(slides);
     const [movieId, setmovieId] = useState('')
-    const [continueWatch,setContinue] = useState([]);
     const {firebase} =useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
     const [content,setcontent] = useState([]);  // By default will be an array
-    const [userId,setUserId] = useState('');
     const [recommend,setRecommend] = useState([]);
 
-    useEffect(() =>{
-      setUserId(user.uid);
-    },[user.uid]);
 
       useEffect(() => {
         setTimeout(() => {
@@ -53,12 +47,13 @@ export function BrowseContainer({slides}){
           setSlideRows(slides[category]);
         }
     
-        },[searchTerm]);
+        // eslint-disable-next-line
+      },[searchTerm]);
 
         const getReccomendationPosts = async () =>{
           try{
             const userPosts = await axios.get('http://localhost:8080/movie/recommend/'+user.uid)
-            setRecommend(userPosts.data); 
+            setRecommend(userPosts.data);  // eslint-disable-next-line
           }catch(error){
             console.log("The error is main Reccomendation function");
           }
@@ -72,13 +67,15 @@ export function BrowseContainer({slides}){
            },10000)
              
              
+           // eslint-disable-next-line
            return()=>clearInterval(interval)
-      },[])
+           // eslint-disable-next-line
+      },[])// eslint-disable-next-line
 
       const getContinueWatchingPosts = async () =>{
         try{
           const userPosts = await axios.get('http://localhost:8080/movie/showContinueWatching/'+user.uid)
-          setcontent(userPosts.data); 
+          setcontent(userPosts.data); // eslint-disable-next-line 
         }catch(error){
           console.log("The error is Continue main function");
         }
@@ -91,14 +88,15 @@ export function BrowseContainer({slides}){
           getContinueWatchingPosts()
          },10000)
            
-           
+           // eslint-disable-next-line
          return()=>clearInterval(interval)
-    },[])
+         // eslint-disable-next-line
+    },[])// eslint-disable-next-line
 
 
 
     return profile.displayName ?(
-      
+       // eslint-disable-next-line
       <>
       {
       loading ?(
@@ -161,6 +159,7 @@ export function BrowseContainer({slides}){
       </Header>
 
       <div className ="row">
+      <Card.Group>
       <Card.Title>Recommended for you</Card.Title>
         <div className ="Continue">
           {recommend.map((movie) => (
@@ -171,6 +170,7 @@ export function BrowseContainer({slides}){
             alt={movie.title}></img>
           ))}
         </div>
+            </Card.Group>
         </div>
       {content.length !==0}
       <div className ="row">

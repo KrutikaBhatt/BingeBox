@@ -1,15 +1,11 @@
 import React, { useContext ,useState,useEffect} from 'react';
 import {FirebaseContext} from '../context/firebase';
-import * as ROUTES from '../Routes_System/routes';
 import axios from 'axios';
-import {Loading} from '../components';
-import { SelectProfileContainer } from '../Container/profiles';
 import '../styles/profilePage.css';
 export default function Profile(){
 
     const {firebase} =useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
-    const [profile,setProfile] = useState({});
     const [content,setcontent] = useState([]);
     const [passwordReset,setpasswordReset] = useState('Reset the password');
 
@@ -18,7 +14,7 @@ export default function Profile(){
         const api = 'http://localhost:8080/api/getUser/'+user.uid;
         console.log(api);
         axios.get(api).then((res) =>{
-            setcontent(res);
+            setcontent(res.data);
             //console.log(res.data);
         })
         .catch((error)=>{
@@ -30,7 +26,7 @@ export default function Profile(){
 
         var auth = firebase.auth();
         var emailAddress = content.emailId;
-        if(emailAddress == ''){
+        if(emailAddress === ''){
             console.log("Error in sending email");
         }
         else{

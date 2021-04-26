@@ -1,7 +1,7 @@
 import React, { useState, useContext, createContext } from 'react';
 import ReactDOM from 'react-dom';
 import { Container, Button, Overlay, Inner, Close } from './styles/player';
-import axios from 'axios';
+
 
 export const PlayerContext = createContext();
 
@@ -34,6 +34,7 @@ Player.Video = function PlayerVideo({ src, ...restProps }) {
 };
 
 Player.Button = function PlayerButton({ ...restProps }) {
+   // eslint-disable-next-line
   const { showPlayer, setShowPlayer } = useContext(PlayerContext);
   return (
     <Button onClick={() => {

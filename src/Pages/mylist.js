@@ -1,9 +1,7 @@
 import React, { useContext ,useState,useEffect} from 'react';
 import {FirebaseContext} from '../context/firebase';
-import * as ROUTES from '../Routes_System/routes';
 import axios from 'axios';
-import {Header,Card,Player} from '../components';
-import { SelectProfileContainer } from '../Container/profiles';
+import {Card,Player} from '../components';
 import '../styles/mylist.css';
 import '../styles/Row.css'
 export default function MyList(){
@@ -26,6 +24,7 @@ export default function MyList(){
         });
     },[]);
 
+     // eslint-disable-next-line
     console.log("The user Info :",content);
     const category = 'series';
     return(
@@ -34,6 +33,7 @@ export default function MyList(){
             <h1>Hello {user.displayName}!</h1>
         </div>
         {content.length ===0 ?(<h2></h2>):(
+             // eslint-disable-next-line
             <>
            <Card.Group> 
         {content.map((item1) => (   

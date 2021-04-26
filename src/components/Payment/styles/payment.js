@@ -1,5 +1,4 @@
 import styled from 'styled-components/macro';
-import { Link as RouterLinkage } from 'react-router-dom';
 
 export const Container = styled.div`
   margin-top:3.2em;

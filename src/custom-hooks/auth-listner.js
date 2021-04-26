@@ -16,10 +16,9 @@ export default function AuthListner(){
                 setUser(null);
             }
         });
-        //Clean up the listner
-        //Make sure this gets cleaned up for better transistion
+        
         return () => listner();
     },[]);
-
+ // eslint-disable-next-line
     return {user};
 }

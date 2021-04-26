@@ -1,7 +1,7 @@
 import Firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import {sendDatabase} from '../database';
+// import {sendDatabase} from '../database';
 
 const config ={
     apiKey: "AIzaSyABL60xF8Ml1QlyUN4lcThXIB_LtysaT9M",
