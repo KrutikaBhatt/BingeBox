@@ -14,7 +14,12 @@ const {
     PROJECT_ID,
     STORAGE_BUCKET,
     MESSAGING_SENDER_ID,
-    APP_ID
+    APP_ID,
+    PAYTM_MID,
+    PAYTM_WEBSITE, 
+    PAYTM_CHANNEL_ID,
+    PAYTM_INDUSTRY_TYPE_ID,
+    PAYTM_MERCHANT_ID
 } = process.env;
 
 assert(PORT, 'PORT is required');
@@ -32,5 +37,10 @@ module.exports = {
         storageBucket: STORAGE_BUCKET,
         messagingSenderId: MESSAGING_SENDER_ID,
         appId: APP_ID
-    }
+    },
+    PAYTM_MID: PAYTM_MID,
+    PAYTM_WEBSITE: PAYTM_WEBSITE, 
+    PAYTM_CHANNEL_ID: PAYTM_CHANNEL_ID,
+    PAYTM_INDUSTRY_TYPE_ID: PAYTM_INDUSTRY_TYPE_ID,
+    PAYTM_MERCHANT_ID:PAYTM_MERCHANT_ID
 }
