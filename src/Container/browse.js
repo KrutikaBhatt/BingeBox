@@ -176,7 +176,7 @@ export function BrowseContainer({slides}){
       {content.length !==0}
       <div className ="row">
 
-      <Card.Title>Continue Watching</Card.Title>
+      <Card.Title>Recently Watched</Card.Title>
         <div className ="Continue">
           {content.map((movie) => (
             <img 

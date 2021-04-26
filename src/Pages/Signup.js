@@ -15,7 +15,7 @@ export default function SignUp(){
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const isInvalid = firstName === '' || password === '' || emailAddress === '';
+    const isInvalid = firstName === '' || password === '' || emailAddress === '' || password.length < 6;
     
     const handleSignup = (event) => {
         event.preventDefault();

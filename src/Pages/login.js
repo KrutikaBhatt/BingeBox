@@ -5,7 +5,6 @@ import {FooterContainer} from '../Container/footer';
 import {HeaderContainer} from '../Container/login_header';
 import {Login_Form} from '../components';
 import * as ROUTES from '../Routes_System/routes';
-import { isElementOfType } from 'react-dom/test-utils';
 
 export default function Login(){
 

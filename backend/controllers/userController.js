@@ -43,14 +43,13 @@ const addToWishlist = async(req,res,next) =>{
     }
 }
 
-const removeFromWishList = async(req, res,next)=>{
+const removeFromWishList = async(req, res, next)=>{
     try {
         const userid = req.body.userId
         const movieid = req.body.movieid
         // const data = req.body;
         const user = firestore.collection('users').doc(userid)
 
-        //
         const user1 = await user.update({
             wishList: firebase1.firestore.FieldValue.arrayRemove(movieid),
         })

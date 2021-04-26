@@ -62,6 +62,7 @@ const showWishList = async(req,res,next) =>{
         console.log(error);
     }
 }
+
 const showContinueWatching = async(req,res,next) =>{
     try{
         const id = req.params.userId
@@ -77,7 +78,7 @@ const showContinueWatching = async(req,res,next) =>{
             }else{
                 //console.log(data.data().wishList);
                 const continueWatching = data.data().continueWatching;
-
+                
                 const send_data=[]
                 let promise = new Promise(function (resolve, reject) {
                     continueWatching.forEach(async show=>{
@@ -99,7 +100,7 @@ const showContinueWatching = async(req,res,next) =>{
                     })
                     setTimeout(() => resolve(send_data), 1000)
                 }).then(send_data =>{
-                   
+
                     res.send(send_data);
                 })
             

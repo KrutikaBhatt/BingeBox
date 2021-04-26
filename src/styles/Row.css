@@ -9,14 +9,14 @@
 .row_posters_frame::-webkit-scrollbar{
     display: none;
 }
+
 .row_poster{
     object-fit: contain;
-    width:300px;
+    width:auto;
     max-height: 380px;
     transition: transform 200ms;
-    margin-right:14px;
+    margin-right: 10px;
     margin-bottom: 8px;
-    
 }
 
 .row_poster:hover{
@@ -32,6 +32,7 @@
     /* padding-left: 10px; */
     margin-bottom: 50px;
     margin-left: 55px;
+    
 }
 
 .Continue::-webkit-scrollbar{
@@ -43,7 +44,7 @@
     width:auto;
     max-height: 380px;
     transition: transform 200ms;
-    margin-right:18px;
+    margin-right:10px;
     margin-left: -5px;
     margin-bottom: 8px;
 }
