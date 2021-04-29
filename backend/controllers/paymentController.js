@@ -67,11 +67,7 @@ if (isVerifySignature) {
                         //     .then(()=>console.log("Update success"))
                         //     .catch(()=>console.log("Unable to update"))
                         // }
-
-                        //res.redirect(`http://localhost:3000/status/${result.ORDERID}`)
                         res.redirect(`http://localhost:3000/browse`)
-
-
             });
         });
     
