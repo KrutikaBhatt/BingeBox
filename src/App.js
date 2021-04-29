@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ROUTES from './Routes_System/routes';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
-import {HOME,Browse,SignUp,Login,Payment,Profile,MyList} from './Pages';
+import {HOME,Browse,SignUp,Login,Payment,Profile,MyList,Callback} from './Pages';
 import {IsUserRedirect, ProtectedBrowse,ProtectedPaymentGateway} from './restrictions/routes';
 import { AuthListner} from './custom-hooks';
 
@@ -45,6 +45,9 @@ export default function App() {
     </Route>
     <Route exact path ={ROUTES.MyList}>
       <MyList />
+    </Route>
+    <Route exact path = {ROUTES.callback}>
+      <Callback />
     </Route>
     </Router>
   );

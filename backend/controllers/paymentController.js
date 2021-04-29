@@ -69,7 +69,7 @@ if (isVerifySignature) {
                         // }
 
                         //res.redirect(`http://localhost:3000/status/${result.ORDERID}`)
-                        res.redirect(`http://localhost:3000/browse`)
+                        res.redirect(`http://localhost:3000/callback`)
 
 
             });

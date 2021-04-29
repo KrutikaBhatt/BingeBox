@@ -5,3 +5,4 @@ export {default as Login} from './login';
 export {default as Payment} from './payment';
 export {default as Profile} from './profile';
 export {default as MyList} from './mylist';
+export {default as Callback} from './callback';
