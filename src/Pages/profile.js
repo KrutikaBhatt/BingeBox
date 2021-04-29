@@ -18,8 +18,8 @@ export default function Profile(){
         const api = 'http://localhost:8080/api/getUser/'+user.uid;
         console.log(api);
         axios.get(api).then((res) =>{
-            setcontent(res);
-            //console.log(res.data);
+            setcontent(res.data);
+            console.log(res.data);
         })
         .catch((error)=>{
             console.log("Error occurred due to Continue Watching");
@@ -42,7 +42,7 @@ export default function Profile(){
         });
     }
     }
-    //console.log("The user Info :",content);
+    console.log("The user Info :",content);
     return(
         <>
         <div className ='form_class'>
