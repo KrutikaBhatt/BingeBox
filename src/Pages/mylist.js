@@ -12,19 +12,39 @@ export default function MyList(){
     const user = firebase.auth().currentUser || {};
     const [content,setcontent] = useState([]);
     const [movieId, setmovieId] = useState('')
+
+    const getList = async () =>{
+      try{
+        const userPosts = await axios.get( 'http://localhost:8080/movie/showWishList/'+user.uid)
+        setcontent(userPosts.data); 
+      }catch(error){
+        console.log("The error is Mylist function");
+      }
+    }
+
     useEffect(()=>{
+
+      getList()
+      const interval=setInterval(()=>{
+        getList ()
+       },10000)
+         
+         
+       return()=>clearInterval(interval)
+  },[])
+    // useEffect(()=>{
             
-        const api = 'http://localhost:8080/movie/showWishList/'+user.uid;
-        console.log(api);
-        axios.get(api).then((res) =>{
-            setcontent(res.data);
-            //console.log(res.data);
-        })
-        .catch((error)=>{
-            console.log("Error occurred due to Continue Watching");
-            console.log(error.message);
-        });
-    },[]);
+    //     const api = 'http://localhost:8080/movie/showWishList/'+user.uid;
+    //     console.log(api);
+    //     axios.get(api).then((res) =>{
+    //         setcontent(res.data);
+    //         //console.log(res.data);
+    //     })
+    //     .catch((error)=>{
+    //         console.log("Error occurred due to Continue Watching");
+    //         console.log(error.message);
+    //     });
+    // },[]);
 
     console.log("The user Info :",content);
     const category = 'series';
