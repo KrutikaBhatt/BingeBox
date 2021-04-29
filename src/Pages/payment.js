@@ -77,7 +77,7 @@ export default function Payment(){
 
             <PaymentComp>
                 <PaymentComp.Title> Choose the plan that’s right for you</PaymentComp.Title>
-                {/* {planData.map(item =>(
+                {planData.map(item =>(
                     <PaymentComp.Col>
                         <PaymentComp.PriceBox>
                             <PaymentComp.Head key={item.id}>{item.header}</PaymentComp.Head>
@@ -92,8 +92,7 @@ export default function Payment(){
                         </PaymentComp.PriceBox>
                         <PaymentComp.Button onClick = {makePayment}>Choose Plan</PaymentComp.Button>
                     </PaymentComp.Col>
-                ))} */}
-                 <PaymentComp.Button onClick = {makePayment}>Choose Plan</PaymentComp.Button>
+                ))}
             </PaymentComp>
         </HeaderContainer>
         <FooterContainer />
