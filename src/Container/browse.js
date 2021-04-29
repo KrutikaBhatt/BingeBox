@@ -6,11 +6,9 @@ import {Loading , Header,Card,Player} from '../components';
 import * as ROUTES from '../Routes_System/routes';
 import logo from '../BingeBoxLogo.png';
 import {FooterContainer} from '../Container/footer';
-import { PlayButton } from '../components/Header/styles/header';
 import axios from 'axios';
 import '../styles/Row.css';
-import { useBootstrapPrefix } from 'react-bootstrap/esm/ThemeProvider';
-import { useHistory } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 export function BrowseContainer({slides}){
 
@@ -18,10 +16,8 @@ export function BrowseContainer({slides}){
     const [profile,setProfile] = useState({});
     const [category, setCategory] = useState('films');
     const [loading,setLoading] = useState(true);
-    //const [category, setCategory] = useState('series');
     const [searchTerm, setsearchTerm] = useState('');
     const [slideRows, setSlideRows] = useState([]);
-    //console.log(slides);
     const [movieId, setmovieId] = useState('')
     const [continueWatch,setContinue] = useState([]);
     const {firebase} =useContext(FirebaseContext);
@@ -29,7 +25,9 @@ export function BrowseContainer({slides}){
     const [content,setcontent] = useState([]);  // By default will be an array
     const [userId,setUserId] = useState('');
     const [recommend,setRecommend] = useState([]);
-
+    const [showPlayer,setShowPlayer] = useState(false);
+    const [playEpisodes,setPlayEpisodes] = useState(false);
+    console.log(slides['series'][1].episode_data);
     useEffect(() =>{
       setUserId(user.uid);
     },[user.uid]);
@@ -161,34 +159,40 @@ export function BrowseContainer({slides}){
       </Header.Feature>
       </Header>
 
-      <div className ="row">
-      <Card.Title>Recommended for you</Card.Title>
-        <div className ="Continue">
-          {recommend.map((movie) => (
-            <img 
-            key={movie.id}
-            className="row_poster" 
-            src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
-            alt={movie.title}></img>
-          ))}
-        </div>
-        </div>
-      {content.length !==0}
-      <div className ="row">
+     {recommend.length==0 ?(<p></p>):(
+        <div className ="row">
+        <Card.Title>Recommended for you</Card.Title>
+          <div className ="Continue">
+            {recommend.map((movie) => (
+              <img 
+              key={movie.id}
+              className="row_poster" 
+              src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
+              alt={movie.title}></img>
+            ))}
+          </div>
+          </div>
+     )}
 
-      <Card.Title>Recently Watched</Card.Title>
-        <div className ="Continue">
-          {content.map((movie) => (
-            <img 
-            key={movie.id}
-            className="row_continue" 
-            src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
-            alt={movie.title}></img>
-          ))}
-        </div>
-        <br></br><br></br><br></br><br></br><br></br>
-        </div>
       
+      {content.length==0?(<></>):(
+        <div className ="row">
+
+        <Card.Title>Recently Watched</Card.Title>
+          <div className ="Continue">
+            {content.map((movie) => (
+              <img 
+              key={movie.id}
+              className="row_continue" 
+              src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
+              alt={movie.title}></img>
+            ))}
+          </div>
+          {/* <br></br><br></br><br></br><br></br><br></br> */}
+          </div>
+      )}
+      
+      <br></br><br></br><br></br><br></br><br></br>
       <Card.Group>
         {slideRows.map((slideItem) => (
           <Card key={`${category}-${slideItem.title.toLowerCase()}`}>
@@ -196,7 +200,7 @@ export function BrowseContainer({slides}){
             <Card.Entities>
               {slideItem.data.map((item) => (
                 <Card.Item key={item.docId} item={item}>
-                  <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} onClick={() =>  setmovieId(item.docId)} />
+                  <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} onClick={() =>  {setmovieId(item.docId);setShowPlayer((showPlayer) => !showPlayer);}} />
                   <Card.Meta>
                     <Card.SubTitle>{item.title}</Card.SubTitle>
                     <Card.Text>{item.description}</Card.Text>
@@ -222,7 +226,7 @@ export function BrowseContainer({slides}){
                   }
                 }}>
                 <Player.Button/>
-                <Player.Video src="/videos/frozen2.mp4" />
+                <Player.Video src={`/videos/${category}/${slideItem.title}.mp4`} />
               </Player>
               <Card.WatchList category={category} onClick={() =>{
                 if(movieId === ''){
@@ -242,6 +246,27 @@ export function BrowseContainer({slides}){
               }}>My List</Card.WatchList>
               </Card.AlignSide>
             </Card.Feature>
+            {category =='series' && showPlayer ==true ?(<>
+              <div>
+              <Card.Title>Season 1</Card.Title>
+              
+              <div className="series_posters_frame">
+                {slides['series'][1].episode_data.map((movie) =>(
+                  <div className ="single_display" key={movie.title}>
+                  <h3 className="single_display_title">{movie.slug} - {movie.title}</h3>
+                  
+                  <Player>
+                    <Player.Episode>
+                    <img src={`/images/series/comedies/${movie.slug}.jpg`} className="series_row" alt ={movie.slug} />
+                    </Player.Episode>
+                    <Player.Video src={`/videos/${category}/comedies/${movie.slug}.mp4`} />
+                  </Player>
+                  </div>
+                ))}
+              </div>
+            </div>
+            </>):(<></>)}
+            
           </Card>
         ))}
       </Card.Group>

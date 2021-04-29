@@ -84,3 +84,7 @@ export const Button = styled.button`
     color:black;
   }
 `;
+export const EpisodeButton = styled.div`
+  cursor: pointer;
+ 
+`;

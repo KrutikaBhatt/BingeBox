@@ -35,8 +35,10 @@ export default function SignUp(){
                   emailId :emailAddress,
                   Name :firstName,
                   plan: '',
-                  recommendation :[],
                   valid_till :'',
+                  wishList :[],
+                  continueWatching :[],
+                  paymentHistory :[],
                 };
                 firestore.collection('users').doc(user.uid).set(data);
                 user.sendEmailVerification().then(function() {

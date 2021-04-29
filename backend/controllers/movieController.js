@@ -144,7 +144,10 @@ const recommendMovie = async(req,res,next) =>{
             res.status(404).send('User not found')
         }else{
             const continueWatching = data.data().continueWatching;
-
+            if(continueWatching.length >4){
+                continueWatching.slice(Math.max(continueWatching.length - 3, 1))
+            }
+            console.log(continueWatching);
             const movie_title=[]
             const movie_genre =[]
             const movie_tags1 = []
@@ -186,7 +189,7 @@ const recommendMovie = async(req,res,next) =>{
                             const ShowData = await firestore.collection('films').where('genre','==',item).where('tags', 'array-contains', tag).get();
                             
                             if(ShowData.empty){
-                                console.log("Pata nahi .. Kuch nahi aa raha");
+                                // console.log("Pata nahi .. Kuch nahi aa raha");
                                 
                             }else{
                                 ShowData.forEach(doc =>{
