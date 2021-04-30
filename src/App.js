@@ -4,6 +4,8 @@ import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import {HOME,Browse,SignUp,Login,Payment,Profile,MyList,Callback} from './Pages';
 import {IsUserRedirect, ProtectedBrowse,ProtectedPaymentGateway} from './restrictions/routes';
 import { AuthListner} from './custom-hooks';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 
 export default function App() {
 
@@ -49,6 +51,7 @@ export default function App() {
     <Route exact path = {ROUTES.callback}>
       <Callback />
     </Route>
+    <NotificationContainer />
     </Router>
   );
 }

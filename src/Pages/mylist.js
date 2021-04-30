@@ -6,6 +6,8 @@ import {Header,Card,Player} from '../components';
 import { SelectProfileContainer } from '../Container/profiles';
 import '../styles/mylist.css';
 import '../styles/Row.css'
+import { NotificationManager } from 'react-notifications';
+
 export default function MyList(){
 
     const {firebase} =useContext(FirebaseContext);
@@ -27,7 +29,7 @@ export default function MyList(){
       getList()
       const interval=setInterval(()=>{
         getList ()
-       },10000)
+       },3000)
          
          
        return()=>clearInterval(interval)
@@ -47,7 +49,7 @@ export default function MyList(){
     // },[]);
 
     console.log("The user Info :",content);
-    const category = 'series';
+    const category = 'films';
     return(
         <>
         <div className="header_title">
@@ -104,6 +106,7 @@ export default function MyList(){
                   console.log(body);
                   axios.post("http://localhost:8080/api/removeWishList",body).then(res =>{
                     console.log(res);
+                    NotificationManager.success('', 'Removed from watchlist',3000);
                   })
                 }
                 console.log(user.uid);

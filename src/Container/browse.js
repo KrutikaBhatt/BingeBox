@@ -10,6 +10,9 @@ import axios from 'axios';
 import '../styles/Row.css';
 import { NavLink, useHistory } from 'react-router-dom';
 
+// React Notification
+import { NotificationManager } from 'react-notifications';
+
 export function BrowseContainer({slides}){
 
     const history = useHistory();
@@ -240,6 +243,8 @@ export function BrowseContainer({slides}){
                   axios.post("http://localhost:8080/api/addToWishList",body).then(res =>{
                     console.log(res);
                   })
+                  NotificationManager.success('', 'Added to WatchList!', 3000);
+ 
                 }
                 console.log(user.uid);
                 console.log(movieId);
