@@ -20,7 +20,10 @@ const {
     PAYTM_CHANNEL_ID,
     PAYTM_INDUSTRY_TYPE_ID,
     PAYTM_MERCHANT_KEY,
-    PAYTM_CUST_ID
+    PAYTM_CUST_ID,
+    Client_ID,
+    Client_Secret,
+    Refresh_token
 } = process.env;
 
 assert(PORT, 'PORT is required');
@@ -44,5 +47,8 @@ module.exports = {
     PAYTM_CHANNEL_ID: PAYTM_CHANNEL_ID,
     PAYTM_INDUSTRY_TYPE_ID: PAYTM_INDUSTRY_TYPE_ID,
     PAYTM_MERCHANT_KEY:PAYTM_MERCHANT_KEY,
-    PAYTM_CUST_ID : PAYTM_CUST_ID
+    PAYTM_CUST_ID : PAYTM_CUST_ID,
+    Client_ID : Client_ID,
+    Client_Secret : Client_Secret,
+    Refresh_token : Refresh_token
 }
