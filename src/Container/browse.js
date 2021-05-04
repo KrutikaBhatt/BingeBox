@@ -30,7 +30,8 @@ export function BrowseContainer({slides}){
     const [recommend,setRecommend] = useState([]);
     const [showPlayer,setShowPlayer] = useState(false);
     const [playEpisodes,setPlayEpisodes] = useState(false);
-    console.log(slides['series'][1].episode_data);
+    const [searchResults,setsearchResults] = useState([]);
+    //console.log(slides['series'][1].episode_data);
     useEffect(() =>{
       setUserId(user.uid);
     },[user.uid]);
@@ -48,14 +49,20 @@ export function BrowseContainer({slides}){
       useEffect(()=>{
         const fuse = new Fuse(slideRows, { keys: ['data.description', 'data.title', 'data.genre'] });
         const results = fuse.search(searchTerm).map(({ item }) => item);
-        //console.log(results);
+        
         if(slideRows.length >0 && searchTerm.length >3 && results.length >0){
           setSlideRows(results);
+          //console.log('Fuse results :',results[0].data);
+          const fuse1 = new Fuse(results[0].data, { keys: ['description', 'title'] });
+          const results1 = fuse1.search(searchTerm).map(({ item }) => item);
+          console.log(results1);
+          setsearchResults(results1);
         }else{
           setSlideRows(slides[category]);
         }
     
         },[searchTerm]);
+
 
         const getReccomendationPosts = async () =>{
           try{
