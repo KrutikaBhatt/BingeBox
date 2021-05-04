@@ -36,9 +36,9 @@ FAQs.Header = function FAQsHeader({ children, ...restProps }) {
     <Header onClick={() => setToggleShow(!toggleShow)} {...restProps} >
       {children}
       {toggleShow ? (
-        <img src="/images/icons/close-slim.png" alt="Close" />
+        <img src="/Images/icons/close-slim.png" alt="Close" />
       ) : (
-        <img src="/images/icons/add.png" alt="Open" />
+        <img src="/Images/icons/add.png" alt="Open" />
       )}
     </Header>
   );
