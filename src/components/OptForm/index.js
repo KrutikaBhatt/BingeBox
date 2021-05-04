@@ -16,7 +16,7 @@ OptingForm.Button = function OptingFormButton({children,...restProps}){
     return (
         <Button {...restProps}>
             {children}
-            <img src ="/images/icons/chevron-right.png" alt ="Subscribe now" />
+            <img src ="/Images/icons/chevron-right.png" alt ="Subscribe now" />
         </Button>
     );
 };
