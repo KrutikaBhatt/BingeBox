@@ -161,7 +161,7 @@ export function BrowseContainer({slides}){
         <Card.AlignSide>
         <Player>
           <Player.Button />
-          <Player.Video src="/videos/Killed_sara.mp4" />
+          <Player.Video src="/Videos/Killed_sara.mp4" />
         </Player>
 
         <Card.WatchList>My List</Card.WatchList>
@@ -177,7 +177,7 @@ export function BrowseContainer({slides}){
               <img 
               key={movie.id}
               className="row_poster" 
-              src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
+              src={`/Images/films/${movie.genre}/${movie.slug}/small.jpg`} 
               alt={movie.title}></img>
             ))}
           </div>
@@ -194,7 +194,7 @@ export function BrowseContainer({slides}){
               <img 
               key={movie.id}
               className="row_continue" 
-              src={`/images/films/${movie.genre}/${movie.slug}/small.jpg`} 
+              src={`/Images/films/${movie.genre}/${movie.slug}/small.jpg`} 
               alt={movie.title}></img>
             ))}
           </div>
@@ -210,7 +210,7 @@ export function BrowseContainer({slides}){
             <Card.Entities>
               {slideItem.data.map((item) => (
                 <Card.Item key={item.docId} item={item}>
-                  <Card.Image src={`/images/${category}/${item.genre}/${item.slug}/small.jpg`} onClick={() =>  {setmovieId(item.docId);setShowPlayer((showPlayer) => !showPlayer);}} />
+                  <Card.Image src={`/Images/${category}/${item.genre}/${item.slug}/small.jpg`} onClick={() =>  {setmovieId(item.docId);setShowPlayer((showPlayer) => !showPlayer);}} />
                   <Card.Meta>
                     <Card.SubTitle>{item.title}</Card.SubTitle>
                     <Card.Text>{item.description}</Card.Text>
@@ -269,9 +269,9 @@ export function BrowseContainer({slides}){
                   
                   <Player>
                     <Player.Episode>
-                    <img src={`/images/series/comedies/${movie.slug}.jpg`} className="series_row" alt ={movie.slug} />
+                    <img src={`/Images/series/comedies/${movie.slug}.jpg`} className="series_row" alt ={movie.slug} />
                     </Player.Episode>
-                    <Player.Video src={`/videos/${category}/comedies/${movie.slug}.mp4`} />
+                    <Player.Video src={`/Videos/${category}/comedies/${movie.slug}.mp4`} />
                   </Player>
                   </div>
                 ))}
