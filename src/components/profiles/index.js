@@ -18,7 +18,7 @@ Profiles.User = function ProfilesUser({ children, ...restProps }) {
 };
 
 Profiles.picture = function ProfilesPicture({ src, ...restProps }) {
-  return <Picture {...restProps} src={src ? `/images/users/${src}.png` : '/images/misc/eclipse_load.gif'} />;
+  return <Picture {...restProps} src={src ? `/Images/users/${src}.png` : '/Images/misc/eclipse_load.gif'} />;
 };
 
 Profiles.Name = function ProfilesName({ children, ...restProps }) {
