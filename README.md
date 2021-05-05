@@ -1,4 +1,4 @@
-# Binge Box - OTT Content Platform
+# BingeBox - OTT Content Platform
 #### To start the web app :
 ```
   1. git clone https://github.com/KrutikaBhatt/Binge_Philic
