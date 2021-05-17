@@ -236,7 +236,7 @@ export function BrowseContainer({slides}){
                   }
                 }}>
                 <Player.Button/>
-                <Player.Video src={`/videos/${category}/${slideItem.title}.mp4`} />
+                <Player.Video src={`/Videos/${category}/${slideItem.title}.mp4`} />
               </Player>
               <Card.WatchList category={category} onClick={() =>{
                 if(movieId === ''){
