@@ -50,7 +50,24 @@ export function BrowseContainer({slides}){
         const results = fuse.search(searchTerm).map(({ item }) => item);
         //console.log(results);
         if(slideRows.length >0 && searchTerm.length >3 && results.length >0){
-          setSlideRows(results);
+          const fuse1 = new Fuse(results[0].data, { keys: ['description', 'title'] });
+          const results1 = fuse1.search(searchTerm).map(({ item }) => item);
+          const kvalues =[]
+          const kobject = {
+            title:results[0].title,
+            data:results1,
+          };
+          
+          kvalues.push(kobject);
+          for(var i=1;i<results.length;i++){
+
+            let ob1 = {
+              title:results[i].title,
+              data:results[i].data,
+            }
+            kvalues.push(ob1);
+          }
+          setSlideRows(kvalues);
         }else{
           setSlideRows(slides[category]);
         }
