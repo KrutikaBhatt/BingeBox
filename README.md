@@ -1,4 +1,4 @@
-# Bing Box - OTT Content Platform
+# BingeBox - OTT Content Platform
 #### To start the web app :
 ```
   1. git clone https://github.com/KrutikaBhatt/Binge_Philic
@@ -44,7 +44,6 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [x] Create FAQs components
 - [x] Create Login page
 - [x] Login authentication with firebase
-- [ ] About and Ways to watch (Aayush)
 - [x] Signup page
 - [x] Signup with firebase
 - [x] Payment page components
@@ -52,28 +51,27 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [x] Show movie description on hover
 - [x] Player Component
 - [x] Search Component
-- [ ] Node initialization
-- [ ] Collabarative Filtering
-- [ ] Regional Shows and movie filtering
-- [ ] Payment using Stripe/PayPal 
+- [X] Node initialization
+- [X] Regional Shows and movie filtering
+- [X] Payment using Paytm
 
 ### Testing 
 ```
   Enter infos and all Testing work in testing.txt
 ```
-- [ ] Footer test
-- [ ] HomePage test
-- [ ] Movie Cards test
-- [ ] Feature test
-- [ ] Form test
-- [ ] Player test
-- [ ] Loading test
-- [ ] Profile test
-- [ ] Header test
-- [ ] Profiles test
-- [ ] Adding test-ids to Profiles
-- [ ] Selection filter test
-- [ ] SignIn Test
-- [ ] SignUp Test
-- [ ] Test Reccomendations
-- [ ] Test Payment
+- [x] Footer test
+- [x] HomePage test
+- [x] Movie Cards test
+- [x] Feature test
+- [x] Form test
+- [x] Player test
+- [x] Loading test
+- [x] Profile test
+- [x] Header test
+- [x] Profiles test
+- [x] Adding test-ids to Profiles
+- [x] Selection filter test
+- [x] SignIn Test
+- [x] SignUp Test
+- [x] Test Reccomendations
+- [x] Test Payment
