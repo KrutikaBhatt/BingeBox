@@ -4,11 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-src/Configurations/
+/src/Configurations/
 /backend/*.env
 # testing
 /coverage
-.env
+/.env
 
 # production
 /build
