@@ -1,4 +1,10 @@
 # BingeBox - OTT Content Platform
+
+## View the project here😎- [BingeBox](https://binge-box-bb.herokuapp.com/)
+```
+The complete link for the project - https://binge-box-bb.herokuapp.com/
+```
+
 #### To start the web app :
 ```
   1. git clone https://github.com/KrutikaBhatt/BingeBox
