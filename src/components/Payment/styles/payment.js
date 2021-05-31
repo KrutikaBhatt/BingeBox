@@ -1,10 +1,10 @@
 import styled from 'styled-components/macro';
 
 export const Container = styled.div`
-  margin-top:3.2em;
+
   background:black;
   color:#fff;
-
+  
 
 `;
 export const Title = styled.h1`
@@ -26,8 +26,8 @@ export const SubTitle = styled.h3`
 `;
 
 export const Col = styled.div`
-  float:left;
-  width:33.3%;
+  margin:auto;
+  width:50%;
   padding:8px;
   box-sizing:border-box;
   border-radius: 15px;
@@ -45,6 +45,7 @@ export const Price_box =styled.div`
   margin:0;
   padding:0;
   transition:0.3s;
+  width:100%;
 
   .hover{
     box-shadow: 0 10px 15px 0 #000;
@@ -84,7 +85,7 @@ export const Button = styled.div`
 
 export const Button =styled.div`
   font-size:20px;
-  background-color:blue;
+  background-color:#1A74E2;
   border:none;
   color:#fff;
   padding: 10px 15px;
@@ -98,20 +99,9 @@ export const Button =styled.div`
   
   padding: 20px;
   position: relative;
-  float: left;
-  margin-top: 40px;
-  margin-left :30%;
-
-  :after{
-  content: " ";
-  position: absolute;
-  right: 110px;
-  top: -15px;
-  border-top: none;
-  border-right: 15px solid transparent;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid blue;
-  }
+  margin:auto;
+  margin-top: 20px;
+  
 
   @media(max-width:900px){
     margin-left:30%;

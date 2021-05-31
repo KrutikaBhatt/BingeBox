@@ -62,6 +62,7 @@ const showWishList = async(req,res,next) =>{
         console.log(error);
     }
 }
+
 const showContinueWatching = async(req,res,next) =>{
     try{
         const id = req.params.userId
@@ -77,7 +78,7 @@ const showContinueWatching = async(req,res,next) =>{
             }else{
                 //console.log(data.data().wishList);
                 const continueWatching = data.data().continueWatching;
-
+                
                 const send_data=[]
                 let promise = new Promise(function (resolve, reject) {
                     continueWatching.forEach(async show=>{
@@ -99,7 +100,7 @@ const showContinueWatching = async(req,res,next) =>{
                     })
                     setTimeout(() => resolve(send_data), 1000)
                 }).then(send_data =>{
-                   
+
                     res.send(send_data);
                 })
             
@@ -143,7 +144,10 @@ const recommendMovie = async(req,res,next) =>{
             res.status(404).send('User not found')
         }else{
             const continueWatching = data.data().continueWatching;
-
+            if(continueWatching.length >4){
+                continueWatching.slice(Math.max(continueWatching.length - 3, 1))
+            }
+            console.log(continueWatching);
             const movie_title=[]
             const movie_genre =[]
             const movie_tags1 = []
@@ -185,7 +189,7 @@ const recommendMovie = async(req,res,next) =>{
                             const ShowData = await firestore.collection('films').where('genre','==',item).where('tags', 'array-contains', tag).get();
                             
                             if(ShowData.empty){
-                                console.log("Pata nahi .. Kuch nahi aa raha");
+                                // console.log("Pata nahi .. Kuch nahi aa raha");
                                 
                             }else{
                                 ShowData.forEach(doc =>{

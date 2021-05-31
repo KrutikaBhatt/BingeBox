@@ -1,9 +1,16 @@
 import React from 'react';
 import * as ROUTES from './Routes_System/routes';
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+<<<<<<< HEAD
 import {HOME,Browse,SignUp,Login,Payment,Profile,MyList} from './Pages';
 import {IsUserRedirect, ProtectedBrowse} from './restrictions/routes';
+=======
+import {HOME,Browse,SignUp,Login,Payment,Profile,MyList,Callback} from './Pages';
+import {IsUserRedirect, ProtectedBrowse,ProtectedPaymentGateway} from './restrictions/routes';
+>>>>>>> earlier-changes-v2
 import { AuthListner} from './custom-hooks';
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer } from 'react-notifications';
 
 export default function App() {
 
@@ -32,6 +39,12 @@ export default function App() {
         <HOME />
     </IsUserRedirect>
 
+<<<<<<< HEAD
+=======
+    {/* <ProtectedPaymentGateway user={user} path={ROUTES.payment}>
+      <Payment />
+     </ProtectedPaymentGateway> */}
+>>>>>>> earlier-changes-v2
      </Switch>
 
      <Route exact path ={ROUTES.payment}>
@@ -40,9 +53,16 @@ export default function App() {
      <Route exact path ={ROUTES.profile}>
         <Profile />
     </Route>
+    <Route exact path ={ROUTES.payment}>
+        <Payment/>
+    </Route>
     <Route exact path ={ROUTES.MyList}>
       <MyList />
     </Route>
+    <Route exact path = {ROUTES.callback}>
+      <Callback />
+    </Route>
+    <NotificationContainer />
     </Router>
   );
 }

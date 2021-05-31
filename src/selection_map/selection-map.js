@@ -5,6 +5,7 @@ export default function  selectionFilter({series,films,India}){
         series: [
             {
                 title:'Documentaries',
+<<<<<<< HEAD
                 data: series.filter((item)=> item.genre === 'documentaries'),
             },
             {
@@ -18,6 +19,125 @@ export default function  selectionFilter({series,films,India}){
             {
                 title:'Crime',
                 data: series.filter((item)=>item.genre === 'crime'),
+=======
+                episode_data :[{
+                    title :'Pilot',
+                    slug:'E1'
+                },
+                {
+                    title :'Diversity Day',
+                    slug:'E2'
+                },
+                {
+                    title:'Health Care',
+                    slug:'E3'
+                },
+                {
+                    title:'The Alliance',
+                    slug:'E4'
+                },
+                {
+                    title:'Basketball',
+                    slug:'E5'
+                },
+                {
+                    title:'Hot Girl',
+                    slug:'E6'
+                }
+
+            ],
+                data: series.filter((item)=> item.genre == 'documentaries'),
+            },
+            {
+                title:'Comedies',
+                episode_data :[{
+                    title :'Pilot',
+                    slug:'E1'
+                },
+                {
+                    title :'Diversity Day',
+                    slug:'E2'
+                },
+                {
+                    title:'Health Care',
+                    slug:'E3'
+                },
+                {
+                    title:'The Alliance',
+                    slug:'E4'
+                },
+                {
+                    title:'Basketball',
+                    slug:'E5'
+                },
+                {
+                    title:'Hot Girl',
+                    slug:'E6'
+                }
+
+            ],
+                data: series.filter((item)=>item.genre == 'comedies'),
+            },
+            {
+                title:'Children',
+                episode_data :[{
+                    title :'Pilot',
+                    slug:'E1'
+                },
+                {
+                    title :'Diversity Day',
+                    slug:'E2'
+                },
+                {
+                    title:'Health Care',
+                    slug:'E3'
+                },
+                {
+                    title:'The Alliance',
+                    slug:'E4'
+                },
+                {
+                    title:'Basketball',
+                    slug:'E5'
+                },
+                {
+                    title:'Hot Girl',
+                    slug:'E6'
+                }
+
+            ],
+                data: series.filter((item)=>item.genre == 'children'),
+            },
+            {
+                title:'Crime',
+                episode_data :[{
+                    title :'Pilot',
+                    slug:'E1'
+                },
+                {
+                    title :'Diversity Day',
+                    slug:'E2'
+                },
+                {
+                    title:'Health Care',
+                    slug:'E3'
+                },
+                {
+                    title:'The Alliance',
+                    slug:'E4'
+                },
+                {
+                    title:'Basketball',
+                    slug:'E5'
+                },
+                {
+                    title:'Hot Girl',
+                    slug:'E6'
+                }
+
+            ],
+                data: series.filter((item)=>item.genre == 'crime'),
+>>>>>>> earlier-changes-v2
             }
         ],
 

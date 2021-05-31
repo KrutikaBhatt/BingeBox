@@ -1,22 +1,8 @@
 [
     {
         "id" :1,
-        "header" :"Mobile",
-        "Price" : "₹ 99 Month",
-        "video_quality" :"Good ",
-        "resolution" :"480p Resolution",
-        "onTV" :"Not available on TV",
-        "onMobile": "Watch on Mobile",
-        "concurrent_watches":1,
-        "unlimited_movies":"Unlimited Movies",
-        "cancel": "Cancel Anytime"
-
-    },
-    
-    {
-        "id" :2,
         "header" :"Standard",
-        "Price" : "₹ 499",
+        "Price" : "₹ 800",
         "video_quality" :"Better",
         "resolution" :"1080p Resolution",
         "onTV" :"Available on TV",
@@ -25,18 +11,5 @@
         "unlimited_movies":"Unlimited Movies",
         "cancel": "Cancel Anytime"
 
-    },
-    {
-        "id" :3,
-        "header" :"Premium",
-        "Price" : "₹ 899",
-        "video_quality" :"Best",
-        "resolution" :"4K+HDR Resolution",
-        "onTV" :"Available on TV",
-        "onMobile": "Watch on Mobile",
-        "concurrent_watches":4,
-        "unlimited_movies":"Unlimited Movies",
-        "cancel": "Cancel Anytime"
     }
-    
 ]

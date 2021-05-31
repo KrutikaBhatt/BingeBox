@@ -4,29 +4,51 @@ import axios from 'axios';
 import {Card,Player} from '../components';
 import '../styles/mylist.css';
 import '../styles/Row.css'
+import { NotificationManager } from 'react-notifications';
+
 export default function MyList(){
 
     const {firebase} =useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
     const [content,setcontent] = useState([]);
     const [movieId, setmovieId] = useState('')
+
+    const getList = async () =>{
+      try{
+        const userPosts = await axios.get( 'http://localhost:8080/movie/showWishList/'+user.uid)
+        setcontent(userPosts.data); 
+      }catch(error){
+        console.log("The error is Mylist function");
+      }
+    }
+
     useEffect(()=>{
+
+      getList()
+      const interval=setInterval(()=>{
+        getList ()
+       },3000)
+         
+         
+       return()=>clearInterval(interval)
+  },[])
+    // useEffect(()=>{
             
-        const api = 'http://localhost:8080/movie/showWishList/'+user.uid;
-        console.log(api);
-        axios.get(api).then((res) =>{
-            setcontent(res.data);
-            //console.log(res.data);
-        })
-        .catch((error)=>{
-            console.log("Error occurred due to Continue Watching");
-            console.log(error.message);
-        });
-    },[]);
+    //     const api = 'http://localhost:8080/movie/showWishList/'+user.uid;
+    //     console.log(api);
+    //     axios.get(api).then((res) =>{
+    //         setcontent(res.data);
+    //         //console.log(res.data);
+    //     })
+    //     .catch((error)=>{
+    //         console.log("Error occurred due to Continue Watching");
+    //         console.log(error.message);
+    //     });
+    // },[]);
 
      // eslint-disable-next-line
     console.log("The user Info :",content);
-    const category = 'series';
+    const category = 'films';
     return(
         <>
         <div className="header_title">
@@ -84,6 +106,7 @@ export default function MyList(){
                   console.log(body);
                   axios.post("http://localhost:8080/api/removeWishList",body).then(res =>{
                     console.log(res);
+                    NotificationManager.success('', 'Removed from watchlist',3000);
                   })
                 }
                 console.log(user.uid);

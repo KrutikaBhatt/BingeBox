@@ -1,10 +1,27 @@
 'use strict';
 
 const firebase = require('../db');
+const config = require('../config')
 const User = require('../models/user');
 const firestore = firebase.firestore();
 const firebase1 = require('firebase');
 const auth = firebase.auth();
+const nodemailer = require('nodemailer');
+const { getDefaultNormalizer } = require('@testing-library/react');
+
+//Sending Mails to Users
+
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      type: 'OAuth2',
+      user: 'krutikabhatt222@gmail.com',
+      pass: 'krutika%3012',
+      clientId: config.Client_ID,
+      clientSecret: config.Client_Secret,
+      refreshToken: config.Refresh_token
+    }
+  });
 
 const getUser = async(req,res,next) =>{
     try {
@@ -43,14 +60,13 @@ const addToWishlist = async(req,res,next) =>{
     }
 }
 
-const removeFromWishList = async(req, res,next)=>{
+const removeFromWishList = async(req, res, next)=>{
     try {
         const userid = req.body.userId
         const movieid = req.body.movieid
         // const data = req.body;
         const user = firestore.collection('users').doc(userid)
 
-        //
         const user1 = await user.update({
             wishList: firebase1.firestore.FieldValue.arrayRemove(movieid),
         })
@@ -79,10 +95,34 @@ const addToContinueWatching = async(req,res,next) =>{
         console.log(error)
     }
 }
+
+const send_mail = async(req,res,next) =>{
+    try{
+        let mailOptions = {
+            from: 'krutikabhatt222@gmail.com',
+            to: 'diamondsshine532@gmail.com',
+            subject: 'Binge Box',
+            text: 'Hi from your Binge Box project'
+          };
+
+          transporter.sendMail(mailOptions, function(err, data) {
+            if (err) {
+              console.log("Error " + err);
+            } else {
+
+              console.log("Email sent successfully");
+              res.send("Email sent successfully");
+            }
+          });
+    }catch(error){
+        console.log("Error occurred in send mail");
+    }
+}
 module.exports ={
     getUser,
     addToWishlist,
     addToContinueWatching,
-    removeFromWishList
+    removeFromWishList,
+    send_mail
 }
 

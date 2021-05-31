@@ -15,7 +15,11 @@ export default function Profile(){
         console.log(api);
         axios.get(api).then((res) =>{
             setcontent(res.data);
+<<<<<<< HEAD
             //console.log(res.data);
+=======
+            console.log(res.data);
+>>>>>>> earlier-changes-v2
         })
         .catch((error)=>{
             console.log("Error occurred due to Continue Watching");
@@ -38,7 +42,7 @@ export default function Profile(){
         });
     }
     }
-    //console.log("The user Info :",content);
+    console.log("The user Info :",content);
     return(
         <>
         <div className ='form_class'>
