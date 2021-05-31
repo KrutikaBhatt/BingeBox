@@ -21,6 +21,10 @@
       - Setup the .env files
 ```
 
+![Homepage](https://github.com/KrutikaBhatt/BingeBox/blob/master/git_image/homepage.png) <br><br>
+![Browse Page](https://github.com/KrutikaBhatt/BingeBox/blob/master/git_image/browse.png)<br><br>
+![Films](https://github.com/KrutikaBhatt/BingeBox/blob/master/git_image/films.PNG)<br><br>
+
 
 ### To-do List:
 - [x] Create homepage
@@ -38,10 +42,7 @@
 - [X] Regional Shows and movie filtering
 - [X] Payment using Paytm
 
-### Testing 
-```
-  Enter infos and all Testing work in testing.txt
-```
+### Testing :
 - [x] Footer test
 - [x] HomePage test
 - [x] Movie Cards test
